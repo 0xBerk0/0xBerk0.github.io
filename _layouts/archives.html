@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 <style>
 /* ── Scanline overlay ────────────────────────────────────── */
 .arc-wrap {
@@ -16,8 +17,8 @@ layout: default
     0deg,
     transparent,
     transparent 2px,
-    rgba(0,255,159,0.015) 2px,
-    rgba(0,255,159,0.015) 4px
+    rgba(215,179,106,0.012) 2px,
+    rgba(215,179,106,0.012) 4px
   );
   pointer-events: none;
   z-index: 0;
@@ -29,14 +30,14 @@ layout: default
   z-index: 1;
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid #33201f;
 }
 
 .arc-header__glitch {
   font-family: 'JetBrains Mono', monospace;
   font-size: 2rem;
   font-weight: 700;
-  color: #00ff9f;
+  color: #d7b36a;
   letter-spacing: -0.02em;
   position: relative;
   display: inline-block;
@@ -51,13 +52,13 @@ layout: default
 }
 
 .arc-header__glitch::before {
-  color: #ff0066;
+  color: #9b1c25;
   animation: glitch-1 4s infinite;
   clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
 }
 
 .arc-header__glitch::after {
-  color: #00d4ff;
+  color: #c7c0ae;
   animation: glitch-2 4s infinite;
   clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
 }
@@ -79,12 +80,12 @@ layout: default
 .arc-header__meta {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: #8b949e;
+  color: #9e8f7f;
   margin-top: 8px;
 }
 
 .arc-header__meta span {
-  color: #00ff9f;
+  color: #d7b36a;
 }
 
 /* ── Search & Filter ─────────────────────────────────────── */
@@ -100,25 +101,25 @@ layout: default
 .arc-search {
   flex: 1;
   min-width: 200px;
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: #100b0b;
+  border: 1px solid #4a2b29;
   border-radius: 6px;
   padding: 8px 14px 8px 36px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
-  color: #e6edf3;
+  color: #ded6c6;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   position: relative;
 }
 
 .arc-search:focus {
-  border-color: #00ff9f;
-  box-shadow: 0 0 0 3px rgba(0,255,159,0.1);
+  border-color: #d7b36a;
+  box-shadow: 0 0 0 3px rgba(155,28,37,0.10);
 }
 
 .arc-search::placeholder {
-  color: #484f58;
+  color: #766a60;
 }
 
 .arc-search-wrap {
@@ -133,20 +134,20 @@ layout: default
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: #484f58;
+  color: #766a60;
   font-size: 1rem;
   pointer-events: none;
   z-index: 1;
 }
 
 .arc-filter-btn {
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: #100b0b;
+  border: 1px solid #4a2b29;
   border-radius: 6px;
   padding: 8px 14px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.78rem;
-  color: #8b949e;
+  color: #9e8f7f;
   cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;
@@ -154,9 +155,9 @@ layout: default
 
 .arc-filter-btn:hover,
 .arc-filter-btn.active {
-  border-color: #00ff9f;
-  color: #00ff9f;
-  background: rgba(0,255,159,0.05);
+  border-color: #d7b36a;
+  color: #d7b36a;
+  background: rgba(155,28,37,0.05);
 }
 
 /* ── Stats bar ───────────────────────────────────────────── */
@@ -167,17 +168,17 @@ layout: default
   gap: 24px;
   margin-bottom: 2rem;
   padding: 12px 16px;
-  background: #161b22;
-  border: 1px solid #21262d;
+  background: #120c0c;
+  border: 1px solid #33201f;
   border-radius: 6px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.78rem;
-  color: #8b949e;
+  color: #9e8f7f;
   flex-wrap: wrap;
 }
 
 .arc-statsbar__item strong {
-  color: #00ff9f;
+  color: #d7b36a;
   margin-right: 4px;
 }
 
@@ -191,8 +192,8 @@ layout: default
 }
 
 .arc-card {
-  background: #0d1117;
-  border: 1px solid #21262d;
+  background: #100b0b;
+  border: 1px solid #33201f;
   border-radius: 8px;
   padding: 20px;
   text-decoration: none !important;
@@ -212,19 +213,19 @@ layout: default
   width: 0; height: 0;
   border-style: solid;
   border-width: 0 28px 28px 0;
-  border-color: transparent #21262d transparent transparent;
+  border-color: transparent #33201f transparent transparent;
   transition: border-color 0.2s;
 }
 
 .arc-card:hover {
-  border-color: #00ff9f44;
+  border-color: #d7b36a44;
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,255,159,0.1);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(155,28,37,0.10);
   text-decoration: none !important;
 }
 
 .arc-card:hover::before {
-  border-color: transparent #00ff9f44 transparent transparent;
+  border-color: transparent #d7b36a44 transparent transparent;
 }
 
 /* Retro scan line on hover */
@@ -238,7 +239,7 @@ layout: default
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(0,255,159,0.03),
+    rgba(215,179,106,0.025),
     transparent
   );
   transition: top 0.6s ease;
@@ -252,7 +253,7 @@ layout: default
 .arc-card__index {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.68rem;
-  color: #484f58;
+  color: #766a60;
   margin-bottom: 10px;
 }
 
@@ -266,9 +267,9 @@ layout: default
 .arc-card__cat {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.68rem;
-  background: rgba(0,255,159,0.08);
-  color: #00ff9f;
-  border: 1px solid rgba(0,255,159,0.2);
+  background: rgba(215,179,106,0.06);
+  color: #d7b36a;
+  border: 1px solid rgba(215,179,106,0.18);
   padding: 2px 8px;
   border-radius: 4px;
 }
@@ -277,8 +278,8 @@ layout: default
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.68rem;
   background: rgba(255,255,255,0.04);
-  color: #8b949e;
-  border: 1px solid #30363d;
+  color: #9e8f7f;
+  border: 1px solid #4a2b29;
   padding: 2px 8px;
   border-radius: 4px;
 }
@@ -287,19 +288,19 @@ layout: default
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.92rem;
   font-weight: 700;
-  color: #e6edf3;
+  color: #ded6c6;
   margin: 0 0 8px;
   line-height: 1.4;
   flex: 1;
 }
 
 .arc-card:hover .arc-card__title {
-  color: #00ff9f;
+  color: #d7b36a;
 }
 
 .arc-card__desc {
   font-size: 0.8rem;
-  color: #8b949e;
+  color: #9e8f7f;
   line-height: 1.5;
   margin: 0 0 14px;
   flex: 1;
@@ -309,7 +310,7 @@ layout: default
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #21262d;
+  border-top: 1px solid #33201f;
   padding-top: 10px;
   margin-top: auto;
 }
@@ -317,13 +318,13 @@ layout: default
 .arc-card__date {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
-  color: #484f58;
+  color: #766a60;
 }
 
 .arc-card__arrow {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: #00ff9f;
+  color: #d7b36a;
   opacity: 0;
   transition: opacity 0.2s, transform 0.2s;
 }
@@ -339,13 +340,13 @@ layout: default
   text-align: center;
   padding: 3rem;
   font-family: 'JetBrains Mono', monospace;
-  color: #484f58;
+  color: #766a60;
   display: none;
 }
 
 .arc-empty__code {
   font-size: 2rem;
-  color: #30363d;
+  color: #4a2b29;
   margin-bottom: 8px;
 }
 
@@ -356,11 +357,34 @@ layout: default
 }
 </style>
 
+<style>
+/* 0xBerk // The Struggler — Grimoire visual layer */
+.arc-wrap{color:#ded6c6}
+.arc-wrap::before{background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(215,179,106,.012) 3px,rgba(215,179,106,.012) 4px)}
+.arc-header{background:radial-gradient(circle at 85% 20%,rgba(155,28,37,.055),transparent 35%)}
+.arc-header__glitch{color:#d7b36a;text-shadow:0 0 12px rgba(215,179,106,.12)}
+.arc-header__meta span{color:#d7b36a}
+.arc-search:focus{border-color:#9b1c25;box-shadow:0 0 0 3px rgba(155,28,37,.10)}
+.arc-filter-btn:hover,.arc-filter-btn.active{border-color:#9b1c25;color:#d7b36a;background:rgba(155,28,37,.06)}
+.arc-statsbar{background:linear-gradient(90deg,rgba(155,28,37,.035),transparent),#120c0c}
+.arc-statsbar__item strong{color:#d7b36a}
+.arc-card{background:radial-gradient(circle at 100% 0%,rgba(155,28,37,.045),transparent 30%),#100b0b;border-left:2px solid #4a2b29;border-radius:4px}
+.arc-card:hover{border-color:#69453f;border-left-color:#9b1c25;box-shadow:0 12px 32px rgba(0,0,0,.48),0 0 0 1px rgba(155,28,37,.08)}
+.arc-card:hover::before{border-color:transparent #9b1c25 transparent transparent}
+.arc-card__cat{background:rgba(155,28,37,.07);color:#d7b36a;border-color:rgba(215,179,106,.18)}
+.arc-card__tag{background:rgba(255,255,255,.025);color:#9e8f7f;border-color:#33201f}
+.arc-card__title{color:#ded6c6}
+.arc-card:hover .arc-card__title{color:#d7b36a}
+.arc-card__footer{border-top-color:#33201f}
+.arc-card__arrow{color:#9b1c25}
+.arc-empty__code{color:#4a2b29}
+</style>
+
 <div class="arc-wrap">
 
   <!-- Header -->
   <div class="arc-header">
-    <div class="arc-header__glitch" data-text="// writeups">// writeups</div>
+    <div class="arc-header__glitch" data-text="// THE STRUGGLER // GRIMOIRE">// THE STRUGGLER // GRIMOIRE</div>
     <div class="arc-header__meta">
       <span>{{ site.posts | size }}</span> posts indexed ·
       last updated <span>{{ site.posts.first.date | date: "%d %b %Y" }}</span>
@@ -374,7 +398,7 @@ layout: default
         class="arc-search"
         type="text"
         id="arc-search-input"
-        placeholder="search posts..."
+        placeholder="search the grimoire..."
         autocomplete="off"
       >
     </div>
@@ -425,14 +449,14 @@ layout: default
       {% endif %}
       <div class="arc-card__footer">
         <span class="arc-card__date">{{ post.date | date: "%d %b %Y" }}</span>
-        <span class="arc-card__arrow">→ read</span>
+        <span class="arc-card__arrow">→ ENTER</span>
       </div>
     </a>
     {% endfor %}
 
     <div class="arc-empty" id="arc-empty">
       <div class="arc-empty__code">404</div>
-      <div>no posts found</div>
+      <div>no chronicles found</div>
     </div>
   </div>
 
