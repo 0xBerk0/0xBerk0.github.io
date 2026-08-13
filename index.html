@@ -1,20 +1,14 @@
+---
+layout: default
+---
 
 <style>
-/* ============================================================
-   ROOT4WIN // NIGHTWIRE — Cyberpunk Noir skin
-   Keeps the Chirpy structure intact; this is intentionally
-   scoped to the custom homepage components.
-   ============================================================ */
+/* ROOT4WIN // NIGHTWIRE — Cyberpunk Noir */
 :root {
   --rw-neon: #b026ff;
-  --rw-neon-2: #00e5ff;
-  --rw-hot: #ff2bd6;
+  --rw-cyan: #00e5ff;
+  --rw-magenta: #ff2bd6;
   --rw-bg: #050509;
-  --rw-panel: #08080d;
-  --rw-panel-2: #0d0b14;
-  --rw-border: #24152f;
-  --rw-text: #f3eaff;
-  --rw-muted: #8f7aa8;
 }
 
 .rw-hire__inner,
@@ -26,7 +20,7 @@
   position: relative;
   box-shadow:
     0 0 0 1px rgba(176,38,255,.025),
-    0 10px 35px rgba(0,0,0,.30);
+    0 12px 36px rgba(0,0,0,.28);
 }
 
 .rw-hire__inner::before,
@@ -40,8 +34,8 @@
   pointer-events: none;
   border-radius: inherit;
   background:
-    linear-gradient(90deg, transparent 0 92%, rgba(0,229,255,.10) 100%),
-    linear-gradient(180deg, rgba(176,38,255,.035), transparent 45%);
+    linear-gradient(90deg, transparent 0 92%, rgba(0,229,255,.08) 100%),
+    linear-gradient(180deg, rgba(176,38,255,.035), transparent 48%);
 }
 
 .rw-hire__inner {
@@ -49,125 +43,70 @@
 }
 
 .rw-hire__pulse {
-  background: var(--rw-neon-2) !important;
+  background: var(--rw-cyan) !important;
   box-shadow: 0 0 10px rgba(0,229,255,.75);
-  animation: rw-pulse 1.8s ease-in-out infinite;
 }
 
 .rw-hire__btn:hover {
   border-color: var(--rw-neon) !important;
   color: #fff !important;
-  box-shadow: 0 0 14px rgba(176,38,255,.25);
+  box-shadow: 0 0 16px rgba(176,38,255,.28);
 }
 
-.rw-terminal__bar {
-  background:
-    linear-gradient(90deg, rgba(176,38,255,.10), transparent 55%),
-    var(--rw-panel-2) !important;
-}
-
-.rw-terminal__title {
-  color: var(--rw-neon-2) !important;
-  text-shadow: 0 0 8px rgba(0,229,255,.45);
-}
-
+.rw-terminal__title,
 .rw-t-prompt,
-.rw-section-title__prompt {
-  color: var(--rw-neon) !important;
+.rw-section-title__prompt,
+.rw-post-card__arrow {
   text-shadow: 0 0 8px rgba(176,38,255,.45);
 }
 
-.rw-t-cmd {
-  color: var(--rw-text) !important;
+.rw-terminal__title,
+.rw-t-prompt,
+.rw-post-card__arrow {
+  color: var(--rw-cyan) !important;
 }
 
-.rw-terminal__output {
-  color: var(--rw-muted) !important;
-}
-
-.rw-t-cursor {
-  color: var(--rw-neon-2) !important;
-  text-shadow: 0 0 8px rgba(0,229,255,.6);
-}
-
-.rw-badge--done {
-  color: var(--rw-neon-2) !important;
-  border-color: rgba(0,229,255,.30) !important;
-  background: rgba(0,229,255,.045) !important;
-}
-
-.rw-badge--wip {
+.rw-stat-card__num {
   color: var(--rw-neon) !important;
-  border-color: rgba(176,38,255,.35) !important;
+  text-shadow: 0 0 10px rgba(176,38,255,.28);
 }
 
 .rw-stat-card:hover,
 .rw-focus-card:hover {
   border-color: var(--rw-neon) !important;
-  box-shadow: 0 0 20px rgba(176,38,255,.08);
-}
-
-.rw-stat-card__num {
-  color: var(--rw-neon-2) !important;
-  text-shadow: 0 0 10px rgba(0,229,255,.20);
-}
-
-.rw-section-title {
-  color: var(--rw-muted) !important;
-}
-
-.rw-post-card {
-  border-left-color: rgba(176,38,255,.20);
+  box-shadow: 0 0 22px rgba(176,38,255,.10);
 }
 
 .rw-post-card:hover {
-  border-color: var(--rw-neon) !important;
-  border-left-color: var(--rw-hot) !important;
-  box-shadow: 0 0 24px rgba(176,38,255,.10);
-  transform: translateY(-2px);
+  border-color: #3b1f50 !important;
+  border-left-color: var(--rw-cyan) !important;
+  box-shadow: 0 0 24px rgba(0,229,255,.08);
 }
 
 .rw-post-card__cat {
-  color: var(--rw-neon-2) !important;
-  border-color: rgba(0,229,255,.25) !important;
+  color: var(--rw-cyan) !important;
+  border-color: rgba(0,229,255,.28) !important;
   background: rgba(0,229,255,.035) !important;
 }
 
 .rw-post-card__tag {
   color: var(--rw-neon) !important;
-  border-color: rgba(176,38,255,.25) !important;
-}
-
-.rw-post-card__title {
-  color: var(--rw-text) !important;
-}
-
-.rw-post-card__arrow {
-  color: var(--rw-neon-2) !important;
-}
-
-.rw-focus-card h3 {
-  color: var(--rw-text) !important;
+  border-color: rgba(176,38,255,.28) !important;
 }
 
 .rw-disclosure__inner {
-  border-left-color: var(--rw-hot) !important;
+  border-left-color: var(--rw-magenta) !important;
   background:
-    linear-gradient(90deg, rgba(255,43,214,.045), transparent 40%),
-    var(--rw-panel) !important;
+    linear-gradient(90deg, rgba(255,43,214,.045), transparent 45%),
+    #08080d !important;
 }
 
 .rw-disclosure__icon,
 .rw-disclosure__title {
-  color: var(--rw-hot) !important;
+  color: var(--rw-magenta) !important;
 }
 
-@keyframes rw-pulse {
-  0%, 100% { opacity: .55; transform: scale(.9); }
-  50% { opacity: 1; transform: scale(1.15); }
-}
-
-/* CRT-ish scanline, deliberately subtle */
+/* Subtle CRT scanlines, intentionally low contrast */
 .rw-hero__terminal::after {
   content: "";
   position: absolute;
@@ -180,8 +119,7 @@
     transparent 1px,
     transparent 4px
   );
-  mix-blend-mode: screen;
-  opacity: .22;
+  opacity: .20;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -192,17 +130,14 @@
 }
 </style>
 
----
-layout: default
----
 
 <!-- ── Open to Work ──────────────────────────────────────── -->
 <section class="rw-hire">
   <div class="rw-hire__inner">
     <span class="rw-hire__pulse"></span>
     <div class="rw-hire__text">
-      <span class="rw-hire__status">[status] open_to_work = <strong>true</strong></span>
-      <span class="rw-hire__msg">Open to red team, penetration testing and offensive development roles.</span>
+      <span class="rw-hire__status">[STATUS] open_to_work = <strong>true</strong></span>
+      <span class="rw-hire__msg">Any job offer is welcome — make your offer, let's make it happen.</span>
     </div>
     <a href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener" class="rw-hire__btn">./contact_me</a>
   </div>
@@ -218,18 +153,25 @@ layout: default
   align-items: center;
   gap: 14px;
   background: #08080d;
-  border: 1px solid #24152f;
-  border-radius: 6px;
+  border: 1px solid #b026ff44;
+  border-radius: 8px;
   padding: 14px 18px;
+  box-shadow: 0 0 24px rgba(176,38,255,0.08);
   flex-wrap: wrap;
 }
 
 .rw-hire__pulse {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: #6b7280;
+  background: #b026ff;
   flex-shrink: 0;
+  animation: rw-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes rw-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(176,38,255,0.5); }
+  50%      { box-shadow: 0 0 0 8px rgba(176,38,255,0); }
 }
 
 .rw-hire__text {
@@ -243,35 +185,34 @@ layout: default
 .rw-hire__status {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
-  color: #8f7aa8;
+  color: #9a86ad;
 }
 
 .rw-hire__status strong {
-  color: #d9c7e8;
+  color: #b026ff;
 }
 
 .rw-hire__msg {
-  font-size: 0.86rem;
-  color: #d9c7e8;
+  font-size: 0.88rem;
+  color: #f3eaff;
 }
 
 .rw-hire__btn {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: #d9c7e8 !important;
-  background: transparent;
-  border: 1px solid #3b1f50;
-  border-radius: 5px;
+  color: #b026ff !important;
+  background: #b026ff15;
+  border: 1px solid #b026ff55;
+  border-radius: 6px;
   padding: 8px 16px;
   text-decoration: none !important;
-  transition: border-color 0.2s, color 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
   white-space: nowrap;
 }
 
 .rw-hire__btn:hover {
-  border-color: #8f7aa8;
-  color: #ffffff !important;
-  text-decoration: none !important;
+  background: #b026ff25;
+  box-shadow: 0 0 16px rgba(176,38,255,0.2);
 }
 
 @media (max-width: 600px) {
@@ -286,44 +227,43 @@ layout: default
       <span class="rw-dot rw-dot--red"></span>
       <span class="rw-dot rw-dot--yellow"></span>
       <span class="rw-dot rw-dot--green"></span>
-      <span class="rw-terminal__title">0xberk ~ %</span>
+      <span class="rw-terminal__title">root@kali ~ $</span>
     </div>
     <div class="rw-terminal__body">
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">0xberk:~$</span>
+        <span class="rw-t-prompt">root@kali:~$</span>
         <span class="rw-t-cmd"> whoami</span>
       </p>
-      <p class="rw-terminal__output">0xberk — offensive security specialist</p>
+      <p class="rw-terminal__output">antónio rodrigues</p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">0xberk:~$</span>
+        <span class="rw-t-prompt">root@kali:~$</span>
         <span class="rw-t-cmd"> cat /etc/roles</span>
       </p>
-      <p class="rw-terminal__output">red team | active directory | c2 & evasion | full stack dev</p>
+      <p class="rw-terminal__output">offensive security | active directory | red team | full stack dev</p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">0xberk:~$</span>
+        <span class="rw-t-prompt">root@kali:~$</span>
         <span class="rw-t-cmd"> cat /etc/certs</span>
       </p>
       <p class="rw-terminal__output">
-        <span class="rw-badge rw-badge--done">CPTS</span>
-        <span class="rw-badge rw-badge--done">CRTO</span>
-        <span class="rw-badge rw-badge--wip">ODPC</span>
-        <span class="rw-badge rw-badge--wip">ARTOC</span>
+        <span class="rw-badge rw-badge--green">✓ CPTS</span>
+        <span class="rw-badge rw-badge--yellow">⟳ CRTO</span>
+        <span class="rw-badge rw-badge--yellow">⟳ CDSA</span>
       </p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">0xberk:~$</span>
+        <span class="rw-t-prompt">root@kali:~$</span>
         <span class="rw-t-cmd"> cat /etc/stats</span>
       </p>
       <p class="rw-terminal__output">
-        <span class="rw-stat">100+ machines solved</span> ·
-        <span class="rw-stat">pro labs: dante, p.o.o.</span>
+        <span class="rw-stat">100+ machines pwned</span> ·
+        <span class="rw-stat">Pro Labs: Dante, P.O.O.</span>
       </p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">0xberk:~$</span>
-        <span class="rw-t-cursor">_</span>
+        <span class="rw-t-prompt">root@kali:~$</span>
+        <span class="rw-t-cursor">█</span>
       </p>
     </div>
   </div>
@@ -340,7 +280,7 @@ layout: default
     <div class="rw-stat-card__label">Pro Labs</div>
   </div>
   <div class="rw-stat-card">
-    <div class="rw-stat-card__num">2</div>
+    <div class="rw-stat-card__num">3</div>
     <div class="rw-stat-card__label">Certs</div>
   </div>
   <div class="rw-stat-card">
@@ -388,20 +328,24 @@ layout: default
   </h2>
   <div class="rw-focus-grid">
     <div class="rw-focus-card">
+      <div class="rw-focus-card__icon">⚔️</div>
       <h3>Active Directory</h3>
-      <p>Kerberoasting, AS-REP Roasting, NTLM relay, ADCS exploitation, RBCD, shadow credentials, domain dominance</p>
+      <p>Kerberoasting, AS-REP Roasting, NTLM Relay, ADCS, Shadow Credentials, RBCD</p>
     </div>
     <div class="rw-focus-card">
-      <h3>Red Team Operations</h3>
-      <p>Lateral movement, pivoting, privilege escalation, persistence, Cobalt Strike operations, C2 infrastructure</p>
+      <div class="rw-focus-card__icon">🔴</div>
+      <h3>Red Team Ops</h3>
+      <p>Lateral movement, pivoting, C2 frameworks, adversary simulation, domain dominance</p>
     </div>
     <div class="rw-focus-card">
-      <h3>C2 & Offensive Development</h3>
-      <p>Process injection, in-memory execution, shellcode loaders, AV/EDR evasion — in progress via ODPC and ARTOC</p>
+      <div class="rw-focus-card__icon">🌐</div>
+      <h3>Web Security</h3>
+      <p>Web application pentesting, API security, auth bypasses, injection attacks</p>
     </div>
     <div class="rw-focus-card">
-      <h3>Full Stack Development</h3>
-      <p>Building the systems I now specialize in breaking — APIs, tooling, automation and CI/CD</p>
+      <div class="rw-focus-card__icon">⚙️</div>
+      <h3>Full Stack Dev</h3>
+      <p>Building and breaking — understanding systems from both sides of the fence</p>
     </div>
   </div>
 </section>
@@ -414,15 +358,16 @@ layout: default
 
 .rw-hero__terminal {
   background: #08080d;
-  border: 1px solid #24152f;
-  border-radius: 8px;
+  border: 1px solid #3b1f50;
+  border-radius: 10px;
   overflow: hidden;
   font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 0 40px rgba(176,38,255,0.08);
 }
 
 .rw-terminal__bar {
   background: #0d0b14;
-  border-bottom: 1px solid #24152f;
+  border-bottom: 1px solid #3b1f50;
   padding: 10px 16px;
   display: flex;
   align-items: center;
@@ -430,19 +375,18 @@ layout: default
 }
 
 .rw-dot {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  opacity: 0.5;
 }
 .rw-dot--red    { background: #ff5f57; }
-.rw-dot--yellow { background: #febc2e; }
+.rw-dot--yellow { background: #00e5ff; }
 .rw-dot--green  { background: #28c840; }
 
 .rw-terminal__title {
   margin-left: 8px;
   font-size: 0.75rem;
-  color: #8f7aa8;
+  color: #9a86ad;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -456,8 +400,8 @@ layout: default
 }
 
 .rw-t-prompt {
-  color: #a88bc2;
-  font-weight: 600;
+  color: #b026ff;
+  font-weight: 700;
 }
 
 .rw-t-cmd {
@@ -465,14 +409,14 @@ layout: default
 }
 
 .rw-terminal__output {
-  color: #a88bc2;
+  color: #9a86ad;
   margin: 0 0 16px 0;
   padding-left: 1rem;
   font-size: 0.88rem;
 }
 
 .rw-t-cursor {
-  color: #d9c7e8;
+  color: #b026ff;
   animation: blink-cursor 1s step-end infinite;
 }
 
@@ -483,18 +427,17 @@ layout: default
 
 .rw-badge {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   padding: 2px 10px;
   border-radius: 4px;
   margin-right: 6px;
   font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 0.02em;
 }
-.rw-badge--done { background: #160f20; color: #d9c7e8; border: 1px solid #3b1f50; }
-.rw-badge--wip  { background: transparent; color: #8f7aa8; border: 1px dashed #3b1f50; }
+.rw-badge--green  { background: #b026ff22; color: #b026ff; border: 1px solid #b026ff44; }
+.rw-badge--yellow { background: #00e5ff22; color: #00e5ff; border: 1px solid #00e5ff44; }
 
 .rw-stat {
-  color: #d9c7e8;
+  color: #f3eaff;
 }
 
 /* ── Stats ───────────────────────────────────────────────── */
@@ -506,28 +449,29 @@ layout: default
 }
 
 .rw-stat-card {
-  background: #08080d;
-  border: 1px solid #1b1023;
+  background: #0d0b14;
+  border: 1px solid #24152f;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .rw-stat-card:hover {
-  border-color: #3b1f50;
+  border-color: #b026ff44;
+  box-shadow: 0 0 20px rgba(176,38,255,0.08);
 }
 
 .rw-stat-card__num {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #f3eaff;
+  color: #b026ff;
 }
 
 .rw-stat-card__label {
-  font-size: 0.72rem;
-  color: #8f7aa8;
+  font-size: 0.75rem;
+  color: #9a86ad;
   margin-top: 4px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -536,8 +480,8 @@ layout: default
 /* ── Section title ───────────────────────────────────────── */
 .rw-section-title {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 0.95rem !important;
-  color: #8f7aa8 !important;
+  font-size: 1rem !important;
+  color: #9a86ad !important;
   text-transform: lowercase;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
@@ -545,7 +489,7 @@ layout: default
 }
 
 .rw-section-title__prompt {
-  color: #a88bc2;
+  color: #b026ff;
   margin-right: 6px;
 }
 
@@ -559,19 +503,20 @@ layout: default
 
 .rw-post-card {
   display: block;
-  background: #08080d;
-  border: 1px solid #1b1023;
+  background: #0d0b14;
+  border: 1px solid #24152f;
   border-radius: 8px;
   padding: 20px;
   text-decoration: none !important;
-  transition: border-color 0.2s, transform 0.15s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   border-left: 3px solid transparent;
 }
 
 .rw-post-card:hover {
   border-color: #3b1f50;
-  border-left-color: #8f7aa8;
-  transform: translateY(-1px);
+  border-left-color: #b026ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   text-decoration: none !important;
 }
 
@@ -584,27 +529,27 @@ layout: default
 
 .rw-post-card__cat {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  background: #160f20;
-  color: #d9c7e8;
-  border: 1px solid #3b1f50;
+  font-size: 0.7rem;
+  background: #b026ff22;
+  color: #b026ff;
+  border: 1px solid #b026ff33;
   padding: 2px 8px;
   border-radius: 4px;
 }
 
 .rw-post-card__tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  background: transparent;
-  color: #8f7aa8;
-  border: 1px solid #24152f;
+  font-size: 0.7rem;
+  background: #b026ff0a;
+  color: #9a86ad;
+  border: 1px solid #3b1f50;
   padding: 2px 8px;
   border-radius: 4px;
 }
 
 .rw-post-card__title {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 0.94rem !important;
+  font-size: 0.95rem !important;
   color: #f3eaff !important;
   margin: 0 0 8px !important;
   line-height: 1.4;
@@ -613,7 +558,7 @@ layout: default
 
 .rw-post-card__desc {
   font-size: 0.82rem;
-  color: #a88bc2;
+  color: #9a86ad;
   margin: 0 0 14px;
   line-height: 1.5;
 }
@@ -626,12 +571,12 @@ layout: default
 
 .rw-post-card__date {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: #604b70;
 }
 
 .rw-post-card__arrow {
-  color: #a88bc2;
+  color: #b026ff;
   font-size: 0.9rem;
   opacity: 0;
   transition: opacity 0.2s, transform 0.2s;
@@ -651,15 +596,20 @@ layout: default
 }
 
 .rw-focus-card {
-  background: #08080d;
-  border: 1px solid #1b1023;
+  background: #0d0b14;
+  border: 1px solid #24152f;
   border-radius: 8px;
   padding: 20px;
   transition: border-color 0.2s;
 }
 
 .rw-focus-card:hover {
-  border-color: #3b1f50;
+  border-color: #b026ff33;
+}
+
+.rw-focus-card__icon {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 .rw-focus-card h3 {
@@ -671,8 +621,8 @@ layout: default
 }
 
 .rw-focus-card p {
-  font-size: 0.81rem;
-  color: #a88bc2;
+  font-size: 0.82rem;
+  color: #9a86ad;
   margin: 0;
   line-height: 1.5;
 }
@@ -690,7 +640,7 @@ layout: default
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
-      setTimeout(() => e.target.style.opacity = '1', i * 60);
+      setTimeout(() => e.target.style.opacity = '1', i * 80);
       observer.unobserve(e.target);
     }
   });
@@ -698,7 +648,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.rw-post-card').forEach(el => {
   el.style.opacity = '0';
-  el.style.transition = 'opacity 0.35s ease, border-color 0.2s, transform 0.15s';
+  el.style.transition = 'opacity 0.4s ease, border-color 0.2s, transform 0.2s, box-shadow 0.2s';
   observer.observe(el);
 });
 </script>
@@ -707,7 +657,7 @@ document.querySelectorAll('.rw-post-card').forEach(el => {
 <section class="rw-disclosure">
   <div class="rw-disclosure__inner">
     <div class="rw-disclosure__header">
-      <span class="rw-disclosure__icon">!</span>
+      <span class="rw-disclosure__icon">⚠</span>
       <span class="rw-disclosure__title">Legal Disclosure</span>
     </div>
     <div class="rw-disclosure__body">
@@ -739,8 +689,8 @@ document.querySelectorAll('.rw-post-card').forEach(el => {
 
 .rw-disclosure__inner {
   background: #08080d;
-  border: 1px solid #24152f;
-  border-left: 3px solid #8f7aa8;
+  border: 1px solid #00e5ff33;
+  border-left: 3px solid #00e5ff;
   border-radius: 0 8px 8px 0;
   padding: 18px 20px;
 }
@@ -753,24 +703,22 @@ document.querySelectorAll('.rw-post-card').forEach(el => {
 }
 
 .rw-disclosure__icon {
-  color: #a88bc2;
-  font-size: 0.85rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
+  color: #00e5ff;
+  font-size: 0.9rem;
 }
 
 .rw-disclosure__title {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #a88bc2;
+  color: #00e5ff;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .rw-disclosure__body p {
   font-size: 0.8rem;
-  color: #a88bc2;
+  color: #9a86ad;
   line-height: 1.6;
   margin: 0 0 8px;
 }
