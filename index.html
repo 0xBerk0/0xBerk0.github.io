@@ -7,8 +7,8 @@ layout: default
   <div class="rw-hire__inner">
     <span class="rw-hire__pulse"></span>
     <div class="rw-hire__text">
-      <span class="rw-hire__status">[STATUS] open_to_work = <strong>true</strong></span>
-      <span class="rw-hire__msg">Any job offer is welcome — make your offer, let's make it happen.</span>
+      <span class="rw-hire__status">[status] open_to_work = <strong>true</strong></span>
+      <span class="rw-hire__msg">Open to red team, penetration testing and offensive development roles.</span>
     </div>
     <a href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener" class="rw-hire__btn">./contact_me</a>
   </div>
@@ -23,26 +23,19 @@ layout: default
   display: flex;
   align-items: center;
   gap: 14px;
-  background: #0d1117;
-  border: 1px solid #00ff9f44;
-  border-radius: 8px;
+  background: #101114;
+  border: 1px solid #23252b;
+  border-radius: 6px;
   padding: 14px 18px;
-  box-shadow: 0 0 24px rgba(0,255,159,0.07);
   flex-wrap: wrap;
 }
 
 .rw-hire__pulse {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #00ff9f;
+  background: #6b7280;
   flex-shrink: 0;
-  animation: rw-pulse 1.6s ease-in-out infinite;
-}
-
-@keyframes rw-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0,255,159,0.5); }
-  50%      { box-shadow: 0 0 0 8px rgba(0,255,159,0); }
 }
 
 .rw-hire__text {
@@ -56,34 +49,35 @@ layout: default
 .rw-hire__status {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
-  color: #8b949e;
+  color: #6e7681;
 }
 
 .rw-hire__status strong {
-  color: #00ff9f;
+  color: #c9d1d9;
 }
 
 .rw-hire__msg {
-  font-size: 0.88rem;
-  color: #e6edf3;
+  font-size: 0.86rem;
+  color: #c9d1d9;
 }
 
 .rw-hire__btn {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: #00ff9f !important;
-  background: #00ff9f15;
-  border: 1px solid #00ff9f55;
-  border-radius: 6px;
+  color: #c9d1d9 !important;
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 5px;
   padding: 8px 16px;
   text-decoration: none !important;
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, color 0.2s;
   white-space: nowrap;
 }
 
 .rw-hire__btn:hover {
-  background: #00ff9f25;
-  box-shadow: 0 0 16px rgba(0,255,159,0.2);
+  border-color: #6e7681;
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 @media (max-width: 600px) {
@@ -98,43 +92,44 @@ layout: default
       <span class="rw-dot rw-dot--red"></span>
       <span class="rw-dot rw-dot--yellow"></span>
       <span class="rw-dot rw-dot--green"></span>
-      <span class="rw-terminal__title">root@kali ~ $</span>
+      <span class="rw-terminal__title">0xberk ~ %</span>
     </div>
     <div class="rw-terminal__body">
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">root@kali:~$</span>
+        <span class="rw-t-prompt">0xberk:~$</span>
         <span class="rw-t-cmd"> whoami</span>
       </p>
-      <p class="rw-terminal__output">antónio rodrigues</p>
+      <p class="rw-terminal__output">0xberk — offensive security specialist</p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">root@kali:~$</span>
+        <span class="rw-t-prompt">0xberk:~$</span>
         <span class="rw-t-cmd"> cat /etc/roles</span>
       </p>
-      <p class="rw-terminal__output">offensive security | active directory | red team | full stack dev</p>
+      <p class="rw-terminal__output">red team | active directory | c2 & evasion | full stack dev</p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">root@kali:~$</span>
+        <span class="rw-t-prompt">0xberk:~$</span>
         <span class="rw-t-cmd"> cat /etc/certs</span>
       </p>
       <p class="rw-terminal__output">
-        <span class="rw-badge rw-badge--green">✓ CPTS</span>
-        <span class="rw-badge rw-badge--yellow">⟳ CRTO</span>
-        <span class="rw-badge rw-badge--yellow">⟳ CDSA</span>
+        <span class="rw-badge rw-badge--done">CPTS</span>
+        <span class="rw-badge rw-badge--done">CRTO</span>
+        <span class="rw-badge rw-badge--wip">ODPC</span>
+        <span class="rw-badge rw-badge--wip">ARTOC</span>
       </p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">root@kali:~$</span>
+        <span class="rw-t-prompt">0xberk:~$</span>
         <span class="rw-t-cmd"> cat /etc/stats</span>
       </p>
       <p class="rw-terminal__output">
-        <span class="rw-stat">100+ machines pwned</span> ·
-        <span class="rw-stat">Pro Labs: Dante, P.O.O.</span>
+        <span class="rw-stat">100+ machines solved</span> ·
+        <span class="rw-stat">pro labs: dante, p.o.o.</span>
       </p>
 
       <p class="rw-terminal__line">
-        <span class="rw-t-prompt">root@kali:~$</span>
-        <span class="rw-t-cursor">█</span>
+        <span class="rw-t-prompt">0xberk:~$</span>
+        <span class="rw-t-cursor">_</span>
       </p>
     </div>
   </div>
@@ -151,7 +146,7 @@ layout: default
     <div class="rw-stat-card__label">Pro Labs</div>
   </div>
   <div class="rw-stat-card">
-    <div class="rw-stat-card__num">3</div>
+    <div class="rw-stat-card__num">2</div>
     <div class="rw-stat-card__label">Certs</div>
   </div>
   <div class="rw-stat-card">
@@ -199,24 +194,20 @@ layout: default
   </h2>
   <div class="rw-focus-grid">
     <div class="rw-focus-card">
-      <div class="rw-focus-card__icon">⚔️</div>
       <h3>Active Directory</h3>
-      <p>Kerberoasting, AS-REP Roasting, NTLM Relay, ADCS, Shadow Credentials, RBCD</p>
+      <p>Kerberoasting, AS-REP Roasting, NTLM relay, ADCS exploitation, RBCD, shadow credentials, domain dominance</p>
     </div>
     <div class="rw-focus-card">
-      <div class="rw-focus-card__icon">🔴</div>
-      <h3>Red Team Ops</h3>
-      <p>Lateral movement, pivoting, C2 frameworks, adversary simulation, domain dominance</p>
+      <h3>Red Team Operations</h3>
+      <p>Lateral movement, pivoting, privilege escalation, persistence, Cobalt Strike operations, C2 infrastructure</p>
     </div>
     <div class="rw-focus-card">
-      <div class="rw-focus-card__icon">🌐</div>
-      <h3>Web Security</h3>
-      <p>Web application pentesting, API security, auth bypasses, injection attacks</p>
+      <h3>C2 & Offensive Development</h3>
+      <p>Process injection, in-memory execution, shellcode loaders, AV/EDR evasion — in progress via ODPC and ARTOC</p>
     </div>
     <div class="rw-focus-card">
-      <div class="rw-focus-card__icon">⚙️</div>
-      <h3>Full Stack Dev</h3>
-      <p>Building and breaking — understanding systems from both sides of the fence</p>
+      <h3>Full Stack Development</h3>
+      <p>Building the systems I now specialize in breaking — APIs, tooling, automation and CI/CD</p>
     </div>
   </div>
 </section>
@@ -228,17 +219,16 @@ layout: default
 }
 
 .rw-hero__terminal {
-  background: #0d1117;
-  border: 1px solid #30363d;
-  border-radius: 10px;
+  background: #101114;
+  border: 1px solid #23252b;
+  border-radius: 8px;
   overflow: hidden;
   font-family: 'JetBrains Mono', monospace;
-  box-shadow: 0 0 40px rgba(0,255,159,0.08);
 }
 
 .rw-terminal__bar {
-  background: #161b22;
-  border-bottom: 1px solid #30363d;
+  background: #16171b;
+  border-bottom: 1px solid #23252b;
   padding: 10px 16px;
   display: flex;
   align-items: center;
@@ -246,9 +236,10 @@ layout: default
 }
 
 .rw-dot {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
+  opacity: 0.5;
 }
 .rw-dot--red    { background: #ff5f57; }
 .rw-dot--yellow { background: #febc2e; }
@@ -257,7 +248,7 @@ layout: default
 .rw-terminal__title {
   margin-left: 8px;
   font-size: 0.75rem;
-  color: #8b949e;
+  color: #6e7681;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -271,8 +262,8 @@ layout: default
 }
 
 .rw-t-prompt {
-  color: #00ff9f;
-  font-weight: 700;
+  color: #8b949e;
+  font-weight: 600;
 }
 
 .rw-t-cmd {
@@ -287,7 +278,7 @@ layout: default
 }
 
 .rw-t-cursor {
-  color: #00ff9f;
+  color: #c9d1d9;
   animation: blink-cursor 1s step-end infinite;
 }
 
@@ -298,17 +289,18 @@ layout: default
 
 .rw-badge {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   padding: 2px 10px;
   border-radius: 4px;
   margin-right: 6px;
   font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
 }
-.rw-badge--green  { background: #00ff9f22; color: #00ff9f; border: 1px solid #00ff9f44; }
-.rw-badge--yellow { background: #febc2e22; color: #febc2e; border: 1px solid #febc2e44; }
+.rw-badge--done { background: #1c2128; color: #c9d1d9; border: 1px solid #30363d; }
+.rw-badge--wip  { background: transparent; color: #6e7681; border: 1px dashed #30363d; }
 
 .rw-stat {
-  color: #e6edf3;
+  color: #c9d1d9;
 }
 
 /* ── Stats ───────────────────────────────────────────────── */
@@ -320,29 +312,28 @@ layout: default
 }
 
 .rw-stat-card {
-  background: #161b22;
-  border: 1px solid #21262d;
+  background: #101114;
+  border: 1px solid #1c1e23;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s;
 }
 
 .rw-stat-card:hover {
-  border-color: #00ff9f44;
-  box-shadow: 0 0 20px rgba(0,255,159,0.08);
+  border-color: #30363d;
 }
 
 .rw-stat-card__num {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: #00ff9f;
+  color: #e6edf3;
 }
 
 .rw-stat-card__label {
-  font-size: 0.75rem;
-  color: #8b949e;
+  font-size: 0.72rem;
+  color: #6e7681;
   margin-top: 4px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -351,8 +342,8 @@ layout: default
 /* ── Section title ───────────────────────────────────────── */
 .rw-section-title {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 1rem !important;
-  color: #8b949e !important;
+  font-size: 0.95rem !important;
+  color: #6e7681 !important;
   text-transform: lowercase;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
@@ -360,7 +351,7 @@ layout: default
 }
 
 .rw-section-title__prompt {
-  color: #00ff9f;
+  color: #8b949e;
   margin-right: 6px;
 }
 
@@ -374,20 +365,19 @@ layout: default
 
 .rw-post-card {
   display: block;
-  background: #161b22;
-  border: 1px solid #21262d;
+  background: #101114;
+  border: 1px solid #1c1e23;
   border-radius: 8px;
   padding: 20px;
   text-decoration: none !important;
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, transform 0.15s;
   border-left: 3px solid transparent;
 }
 
 .rw-post-card:hover {
   border-color: #30363d;
-  border-left-color: #00ff9f;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  border-left-color: #6e7681;
+  transform: translateY(-1px);
   text-decoration: none !important;
 }
 
@@ -400,27 +390,27 @@ layout: default
 
 .rw-post-card__cat {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  background: #00ff9f22;
-  color: #00ff9f;
-  border: 1px solid #00ff9f33;
+  font-size: 0.68rem;
+  background: #1c2128;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
   padding: 2px 8px;
   border-radius: 4px;
 }
 
 .rw-post-card__tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  background: #ffffff0a;
-  color: #8b949e;
-  border: 1px solid #30363d;
+  font-size: 0.68rem;
+  background: transparent;
+  color: #6e7681;
+  border: 1px solid #23252b;
   padding: 2px 8px;
   border-radius: 4px;
 }
 
 .rw-post-card__title {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 0.95rem !important;
+  font-size: 0.94rem !important;
   color: #e6edf3 !important;
   margin: 0 0 8px !important;
   line-height: 1.4;
@@ -442,12 +432,12 @@ layout: default
 
 .rw-post-card__date {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #484f58;
 }
 
 .rw-post-card__arrow {
-  color: #00ff9f;
+  color: #8b949e;
   font-size: 0.9rem;
   opacity: 0;
   transition: opacity 0.2s, transform 0.2s;
@@ -467,20 +457,15 @@ layout: default
 }
 
 .rw-focus-card {
-  background: #161b22;
-  border: 1px solid #21262d;
+  background: #101114;
+  border: 1px solid #1c1e23;
   border-radius: 8px;
   padding: 20px;
   transition: border-color 0.2s;
 }
 
 .rw-focus-card:hover {
-  border-color: #00ff9f33;
-}
-
-.rw-focus-card__icon {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  border-color: #30363d;
 }
 
 .rw-focus-card h3 {
@@ -492,7 +477,7 @@ layout: default
 }
 
 .rw-focus-card p {
-  font-size: 0.82rem;
+  font-size: 0.81rem;
   color: #8b949e;
   margin: 0;
   line-height: 1.5;
@@ -511,7 +496,7 @@ layout: default
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
-      setTimeout(() => e.target.style.opacity = '1', i * 80);
+      setTimeout(() => e.target.style.opacity = '1', i * 60);
       observer.unobserve(e.target);
     }
   });
@@ -519,7 +504,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.rw-post-card').forEach(el => {
   el.style.opacity = '0';
-  el.style.transition = 'opacity 0.4s ease, border-color 0.2s, transform 0.2s, box-shadow 0.2s';
+  el.style.transition = 'opacity 0.35s ease, border-color 0.2s, transform 0.15s';
   observer.observe(el);
 });
 </script>
@@ -528,7 +513,7 @@ document.querySelectorAll('.rw-post-card').forEach(el => {
 <section class="rw-disclosure">
   <div class="rw-disclosure__inner">
     <div class="rw-disclosure__header">
-      <span class="rw-disclosure__icon">⚠</span>
+      <span class="rw-disclosure__icon">!</span>
       <span class="rw-disclosure__title">Legal Disclosure</span>
     </div>
     <div class="rw-disclosure__body">
@@ -559,9 +544,9 @@ document.querySelectorAll('.rw-post-card').forEach(el => {
 }
 
 .rw-disclosure__inner {
-  background: #0d1117;
-  border: 1px solid #febc2e33;
-  border-left: 3px solid #febc2e;
+  background: #101114;
+  border: 1px solid #23252b;
+  border-left: 3px solid #6e7681;
   border-radius: 0 8px 8px 0;
   padding: 18px 20px;
 }
@@ -574,15 +559,17 @@ document.querySelectorAll('.rw-post-card').forEach(el => {
 }
 
 .rw-disclosure__icon {
-  color: #febc2e;
-  font-size: 0.9rem;
+  color: #8b949e;
+  font-size: 0.85rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
 }
 
 .rw-disclosure__title {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  color: #febc2e;
+  color: #8b949e;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
