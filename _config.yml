@@ -2,23 +2,28 @@ theme: jekyll-theme-chirpy
 lang: en
 timezone: Europe/Lisbon
 title: 0xBerk
-tagline: Offensive Security | Red Team & Active Directory
+tagline: "Offensive Security // Red Team // Active Directory"
 description: >-
-  Writeups, red team research and offensive development notes
-  by 0xBerk. CPTS & CRTO certified — breaking things to understand them.
+  Writeups, red team research and offensive development notes by 0xBerk.
+  CPTS & CRTO certified — breaking things to understand them.
 url: "https://root4win.github.io"
 baseurl: ""
+
 github:
   username: root4win
+
 social:
   name: 0xBerk
   links:
     - https://github.com/root4win
     - https://www.linkedin.com/in/antónio-rodrigues-55996b2ab
+
 avatar: /assets/img/profile.jpg
+
 theme_mode: dark
 toc: true
 paginate: 10
+
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
@@ -29,10 +34,12 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+
 collections:
   tabs:
     output: true
     sort_by: order
+
 defaults:
   - scope:
       path: ""
@@ -42,18 +49,22 @@ defaults:
       comments: false
       toc: true
       permalink: /posts/:title/
+
   - scope:
       path: _drafts
     values:
       comments: false
+
   - scope:
       path: ""
       type: tabs
     values:
       layout: page
       permalink: /:title/
+
 sass:
   style: compressed
+
 compress_html:
   clippings: all
   comments: all
@@ -62,6 +73,7 @@ compress_html:
   blanklines: false
   ignore:
     envs: [development]
+
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -72,6 +84,7 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
