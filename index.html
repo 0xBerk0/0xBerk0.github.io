@@ -3,797 +3,530 @@ layout: default
 ---
 
 <!-- =========================================================
-     0xBerk // HACKER TERMINAL
-     Jekyll/Chirpy homepage — Liquid-safe
+     0xBerk // FIELD LOG
+     Monopage portfolio — Jekyll/Chirpy, Liquid-safe
      ========================================================= -->
 
-<section class="xbt-boot" aria-label="System boot">
-  <div class="xbt-boot__terminal">
-    <div class="xbt-windowbar">
-      <span class="xbt-dot xbt-dot--red"></span>
-      <span class="xbt-dot xbt-dot--amber"></span>
-      <span class="xbt-dot xbt-dot--green"></span>
-      <span class="xbt-windowbar__title">0xberk-terminal — /dev/pts/0</span>
-      <span class="xbt-windowbar__meta">GRIMOIRE // PT</span>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div class="fl">
+
+  <!-- ============ NAV ============ -->
+  <nav class="fl-nav">
+    <a href="#top" class="fl-nav__mark">0x<span>Berk</span><i class="fl-caret" aria-hidden="true"></i></a>
+    <div class="fl-nav__links">
+      <a href="#about">whoami</a>
+      <a href="#certifications">certs</a>
+      <a href="#writeups">writeups</a>
+      <a href="#labs">labs</a>
+      <a href="#contact">contact</a>
     </div>
+    <div class="fl-nav__status"><span class="fl-dot"></span>active</div>
+  </nav>
 
-    <div class="xbt-boot__body">
-      <pre class="xbt-ascii" aria-label="0xBerk ASCII logo">
-                 ╱╲
-              ╱╲╱  ╲╱╲
-             ╱  THE   ╲
-            ╱ STRUGGLER ╲
-            ╲     †     ╱
-             ╲   ╱ ╲   ╱
-              ╲╱   ╲╱
-        ━━━━━━━━━━━━━━━━━━━━━
-             0xBERK
-        OFFENSIVE SECURITY
-        RESEARCH // RED TEAM</pre>
-
-      <div class="xbt-boot__log" aria-live="polite">
-        <div><span class="xbt-ok">[ OK ]</span> awakening the struggler</div>
-        <div><span class="xbt-ok">[ OK ]</span> forging red_team module</div>
-        <div><span class="xbt-ok">[ OK ]</span> opening /grimoire/writeups</div>
-        <div><span class="xbt-ok">[ OK ]</span> summoning active_directory toolkit</div>
-        <div><span class="xbt-ok">[ OK ]</span> consulting certification ledger</div>
-        <div><span class="xbt-warn">[ !! ]</span> willpower dependency: <strong>CRITICAL</strong></div>
-        <div><span class="xbt-ok">[ OK ]</span> the path remains open</div>
-      </div>
-
-      <div class="xbt-promptline">
-        <span>root@0xberk:~$</span>
-        <span class="xbt-command">whoami</span>
-      </div>
-      <div class="xbt-output">0xBerk — the struggler / offensive security / red team / active directory</div>
-      <div class="xbt-promptline">
-        <span>root@0xberk:~$</span>
-        <span class="xbt-command">cat /etc/motd</span>
-      </div>
-      <div class="xbt-output xbt-output--accent">"struggle. adapt. understand."</div>
+  <!-- ============ HERO ============ -->
+  <header id="top" class="fl-hero">
+    <p class="fl-hero__eyebrow">offensive security &middot; red team &middot; active directory</p>
+    <h1 class="fl-hero__title">The struggler behind 0xBerk.</h1>
+    <p class="fl-hero__lede">
+      I break Active Directory environments, web apps and internal networks for a living —
+      then write down exactly how, so the next person doesn't have to struggle the same way I did.
+    </p>
+    <div class="fl-hero__stats">
+      <span><strong>100+</strong> machines</span>
+      <span class="fl-sep">/</span>
+      <span><strong>2</strong> pro labs</span>
+      <span class="fl-sep">/</span>
+      <span><strong>CPTS</strong> certified</span>
+      <span class="fl-sep">/</span>
+      <span><strong>{{ site.posts | size }}</strong> writeups</span>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="xbt-status" aria-label="System status">
-  <div class="xbt-status__left">
-    <span class="xbt-online"></span>
-    <span>THE STRUGGLER // ONLINE</span>
-  </div>
-  <div class="xbt-status__items">
-    <span><b>NODE</b> PT-AVR-01</span>
-    <span><b>MODE</b> RED_TEAM</span>
-    <span><b>THREAT</b> LOW</span>
-    <span><b>UPTIME</b> 1337d</span>
-  </div>
-</section>
-
-<section class="xbt-terminal" aria-label="Interactive terminal">
-  <div class="xbt-windowbar">
-    <span class="xbt-dot xbt-dot--red"></span>
-    <span class="xbt-dot xbt-dot--amber"></span>
-    <span class="xbt-dot xbt-dot--green"></span>
-    <span class="xbt-windowbar__title">operator@0xberk:~</span>
-  </div>
-
-  <div class="xbt-terminal__body">
-    <div class="xbt-term-row">
-      <span class="xbt-prompt">root@0xberk:~$</span>
-      <span class="xbt-command">uname -a</span>
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="fl-section">
+    <p class="fl-log">[00:00:04] $ whoami</p>
+    <div class="fl-section__body fl-about">
+      <p>
+        I'm António — under the handle <strong>0xBerk</strong> — an offensive security researcher
+        based in Portugal, focused on Active Directory attack paths, Kerberos abuse and internal
+        network compromise. Most of what I know came from getting stuck for hours on a box,
+        refusing to look at the walkthrough, and eventually understanding why the exploit worked.
+      </p>
+      <p>
+        This page is where that process lives: certifications in progress, machines and Pro Labs
+        cleared, and full writeups of how each one fell.
+      </p>
     </div>
-    <div class="xbt-output">0xBERK_OS x86_64 GNU/Linux // SECURITY RESEARCH BUILD</div>
+  </section>
 
-    <div class="xbt-term-row">
-      <span class="xbt-prompt">root@0xberk:~$</span>
-      <span class="xbt-command">cat /etc/path</span>
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications" class="fl-section">
+    <p class="fl-log">[00:00:11] $ cat ~/certs.log</p>
+    <div class="fl-section__body">
+      <ul class="fl-cert-list">
+        <li class="fl-cert">
+          <div class="fl-cert__row">
+            <span class="fl-cert__code">CPTS</span>
+            <span class="fl-cert__name">Certified Penetration Testing Specialist</span>
+            <span class="fl-cert__state fl-cert__state--done">verified</span>
+          </div>
+          <div class="fl-bar"><span style="width:100%"></span></div>
+        </li>
+        <li class="fl-cert">
+          <div class="fl-cert__row">
+            <span class="fl-cert__code">CRTO</span>
+            <span class="fl-cert__name">Certified Red Team Operator</span>
+            <span class="fl-cert__state">in progress &middot; 55%</span>
+          </div>
+          <div class="fl-bar"><span style="width:55%"></span></div>
+        </li>
+        <li class="fl-cert">
+          <div class="fl-cert__row">
+            <span class="fl-cert__code">OCP</span>
+            <span class="fl-cert__name">Offensive Security Certification Track</span>
+            <span class="fl-cert__state">in progress &middot; 40%</span>
+          </div>
+          <div class="fl-bar"><span style="width:40%"></span></div>
+        </li>
+        <li class="fl-cert">
+          <div class="fl-cert__row">
+            <span class="fl-cert__code">ARTOC</span>
+            <span class="fl-cert__name">Advanced Red Team Operator Track</span>
+            <span class="fl-cert__state">in progress &middot; 30%</span>
+          </div>
+          <div class="fl-bar"><span style="width:30%"></span></div>
+        </li>
+      </ul>
     </div>
-    <div class="xbt-output">survive | adapt | learn | break | understand</div>
+  </section>
 
-    <div class="xbt-term-row">
-      <span class="xbt-prompt">root@0xberk:~$</span>
-      <span class="xbt-command">cat /etc/arsenal</span>
-    </div>
-    <div class="xbt-output xbt-badges">
-      <span class="xbt-badge xbt-badge--green">CPTS</span>
-      <span class="xbt-badge xbt-badge--cyan">CRTO</span>
-      <span class="xbt-badge xbt-badge--cyan">CDSA</span>
-    </div>
-
-    <div class="xbt-term-row">
-      <span class="xbt-prompt">root@0xberk:~$</span>
-      <span class="xbt-command">cat /etc/ledger</span>
-    </div>
-    <div class="xbt-output">100+ machines conquered // Pro Labs: Dante, P.O.O. // chronicles: {{ site.posts | size }}</div>
-
-    <div class="xbt-term-row">
-      <span class="xbt-prompt">root@0xberk:~$</span>
-      <span class="xbt-cursor">█</span>
-    </div>
-  </div>
-</section>
-
-<section class="xbt-command-menu" aria-label="Navigation">
-  <div class="xbt-section-head">
-    <span class="xbt-section-head__prompt">$</span>
-    <span>help</span>
-  </div>
-
-  <div class="xbt-command-grid">
-    <a href="#writeups" class="xbt-command-card">
-      <span class="xbt-command-card__num">01</span>
-      <span class="xbt-command-card__cmd">./grimoire</span>
-      <span class="xbt-command-card__desc">HTB, AD, web and red-team chronicles</span>
-    </a>
-    <a href="#certifications" class="xbt-command-card">
-      <span class="xbt-command-card__num">02</span>
-      <span class="xbt-command-card__cmd">./arsenal</span>
-      <span class="xbt-command-card__desc">Certification ledger</span>
-    </a>
-    <a href="#labs" class="xbt-command-card">
-      <span class="xbt-command-card__num">03</span>
-      <span class="xbt-command-card__cmd">./battlegrounds</span>
-      <span class="xbt-command-card__desc">Machines, Pro Labs and battlefields</span>
-    </a>
-    <a href="#contact" class="xbt-command-card">
-      <span class="xbt-command-card__num">04</span>
-      <span class="xbt-command-card__cmd">./raven</span>
-      <span class="xbt-command-card__desc">Establish communications</span>
-    </a>
-  </div>
-</section>
-
-<section id="writeups" class="xbt-posts">
-  <div class="xbt-section-head">
-    <span class="xbt-section-head__prompt">$</span>
-    <span>open /grimoire | head</span>
-  </div>
-
-  <div class="xbt-post-grid">
-    {% for post in site.posts limit:6 %}
-    <a href="{{ post.url }}" class="xbt-post-card">
-      <div class="xbt-post-card__header">
-        <span class="xbt-post-card__id">CHRONICLE // {{ forloop.index | prepend: "0" }}</span>
-        <span class="xbt-post-card__state">CONQUERED</span>
-      </div>
-
-      <div class="xbt-post-card__meta">
-        {% if post.categories.size > 0 %}
-        <span>[{{ post.categories | first }}]</span>
-        {% endif %}
-        {% for tag in post.tags limit:2 %}
-        <span>#{{ tag }}</span>
+  <!-- ============ WRITEUPS ============ -->
+  <section id="writeups" class="fl-section">
+    <p class="fl-log">[00:00:19] $ ls -la ~/writeups/</p>
+    <div class="fl-section__body">
+      {% if site.posts.size > 0 %}
+      <ul class="fl-post-list">
+        {% for post in site.posts limit:8 %}
+        <li class="fl-post">
+          <a href="{{ post.url }}" class="fl-post__link">
+            <span class="fl-post__date">{{ post.date | date: "%Y.%m.%d" }}</span>
+            <span class="fl-post__main">
+              <span class="fl-post__title">{{ post.title }}</span>
+              {% if post.description %}
+              <span class="fl-post__desc">{{ post.description }}</span>
+              {% elsif post.excerpt %}
+              <span class="fl-post__desc">{{ post.excerpt | strip_html | truncate: 130 }}</span>
+              {% endif %}
+              {% if post.tags.size > 0 %}
+              <span class="fl-post__tags">
+                {% for tag in post.tags limit:4 %}<span>{{ tag }}</span>{% endfor %}
+              </span>
+              {% endif %}
+            </span>
+            <span class="fl-post__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
         {% endfor %}
-      </div>
-
-      <h2 class="xbt-post-card__title">{{ post.title }}</h2>
-
-      {% if post.description %}
-      <p class="xbt-post-card__desc">{{ post.description }}</p>
-      {% elsif post.excerpt %}
-      <p class="xbt-post-card__desc">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </ul>
+      {% if site.posts.size > 8 %}
+      <a href="{{ '/archives/' | relative_url }}" class="fl-more">view all {{ site.posts | size }} writeups &rarr;</a>
       {% endif %}
-
-      <div class="xbt-post-card__footer">
-        <span>{{ post.date | date: "%Y-%m-%d" }}</span>
-        <span>ENTER →</span>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-
-<section id="certifications" class="xbt-panel">
-  <div class="xbt-section-head">
-    <span class="xbt-section-head__prompt">$</span>
-    <span>cat /grimoire/ledger/certifications</span>
-  </div>
-
-  <div class="xbt-cert-grid">
-    <div class="xbt-cert">
-      <div class="xbt-cert__top">
-        <span>CPTS</span>
-        <span class="xbt-cert__ok">VERIFIED</span>
-      </div>
-      <div class="xbt-progress"><span style="width:100%"></span></div>
-      <small>Certified Penetration Testing Specialist // TRIAL COMPLETE</small>
+      {% else %}
+      <p class="fl-empty">Nothing published yet — the first writeup is being drafted.</p>
+      {% endif %}
     </div>
+  </section>
 
-    <div class="xbt-cert xbt-cert--progress">
-      <div class="xbt-cert__top">
-        <span>CRTO</span>
-        <span class="xbt-cert__progress">IN PROGRESS</span>
-      </div>
-      <div class="xbt-progress"><span style="width:55%"></span></div>
-      <small>Certified Red Team Operator // TRIAL IN PROGRESS</small>
+  <!-- ============ LABS ============ -->
+  <section id="labs" class="fl-section">
+    <p class="fl-log">[00:00:27] $ history | grep battlegrounds</p>
+    <div class="fl-section__body">
+      <dl class="fl-facts">
+        <div class="fl-fact">
+          <dt>Hack The Box</dt>
+          <dd>100+ retired &amp; active machines compromised across Windows and Linux.</dd>
+        </div>
+        <div class="fl-fact">
+          <dt>Pro Labs</dt>
+          <dd>Dante, P.O.O. — multi-host chains against realistic corporate networks.</dd>
+        </div>
+        <div class="fl-fact">
+          <dt>Web</dt>
+          <dd>Auth flaws, injection, API abuse — mostly as an entry point into internal infra.</dd>
+        </div>
+        <div class="fl-fact">
+          <dt>Active Directory</dt>
+          <dd>Kerberos abuse, ADCS misconfigurations, resource-based constrained delegation.</dd>
+        </div>
+      </dl>
     </div>
+  </section>
 
-    <div class="xbt-cert xbt-cert--progress">
-      <div class="xbt-cert__top">
-        <span>OCP</span>
-        <span class="xbt-cert__progress">IN PROGRESS</span>
-      </div>
-      <div class="xbt-progress"><span style="width:40%"></span></div>
-      <small>Offensive security certification track // TRIAL IN PROGRESS</small>
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="fl-section fl-section--contact">
+    <p class="fl-log">[00:00:33] $ nc raven -p 443</p>
+    <div class="fl-section__body fl-contact">
+      <p>Research, red team engagements, or just talking through a chain that isn't clicking — reach out.</p>
+      <a href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener" class="fl-contact__link">
+        connect on LinkedIn &rarr;
+      </a>
     </div>
+  </section>
 
-    <div class="xbt-cert xbt-cert--progress">
-      <div class="xbt-cert__top">
-        <span>ARTOC</span>
-        <span class="xbt-cert__progress">IN PROGRESS</span>
-      </div>
-      <div class="xbt-progress"><span style="width:30%"></span></div>
-      <small>Advanced Red Team Operator track // TRIAL IN PROGRESS</small>
-    </div>
-  </div>
-</section>
+  <!-- ============ FOOTER / DISCLOSURE ============ -->
+  <footer class="fl-footer">
+    <details class="fl-disclosure">
+      <summary>Legal disclosure</summary>
+      <p>
+        All content published here — writeups, walkthroughs and technical research — is for
+        educational purposes only, discussed strictly in the context of authorized platforms
+        such as Hack The Box and TryHackMe. Applying any of these techniques against systems
+        without explicit written authorization is illegal. Always get proper authorization
+        before conducting a security assessment.
+      </p>
+    </details>
+    <p class="fl-footer__sig">0xBerk &middot; struggle. adapt. understand.</p>
+  </footer>
 
-<section id="labs" class="xbt-panel">
-  <div class="xbt-section-head">
-    <span class="xbt-section-head__prompt">$</span>
-    <span>inspect --open /battlegrounds</span>
-  </div>
-
-  <div class="xbt-lab-grid">
-    <div class="xbt-lab">
-      <span class="xbt-lab__port">1337/tcp</span>
-      <strong>HTB // BATTLEGROUND</strong>
-      <small>100+ targets compromised</small>
-    </div>
-    <div class="xbt-lab">
-      <span class="xbt-lab__port">31337/tcp</span>
-      <strong>PRO LABS // WAR</strong>
-      <small>Dante // P.O.O.</small>
-    </div>
-    <div class="xbt-lab">
-      <span class="xbt-lab__port">443/tcp</span>
-      <strong>WEB // FORGE</strong>
-      <small>APIs // auth // injection</small>
-    </div>
-    <div class="xbt-lab">
-      <span class="xbt-lab__port">445/tcp</span>
-      <strong>AD // FORTRESS</strong>
-      <small>Kerberos // ADCS // RBCD</small>
-    </div>
-  </div>
-</section>
-
-<section class="xbt-easter" aria-label="Terminal easter egg">
-  <div class="xbt-section-head">
-    <span class="xbt-section-head__prompt">$</span>
-    <span>sudo break_the_curse</span>
-  </div>
-  <div class="xbt-easter__output">
-    <span class="xbt-error">[!] THE CURSE RESISTS</span>
-    <span>the struggler does not kneel.</span>
-    <span>brand_id: 0x1337</span>
-  </div>
-</section>
-
-<section id="contact" class="xbt-contact">
-  <div class="xbt-contact__inner">
-    <div>
-      <div class="xbt-contact__eyebrow">[ RAVEN // COMMUNICATIONS CHANNEL ]</div>
-      <h2>Still standing?</h2>
-      <p>Research, red team, engineering — send the signal. Let's make it happen.</p>
-    </div>
-    <a href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener">./raven_me</a>
-  </div>
-</section>
-
-<section class="xbt-disclosure">
-  <div class="xbt-disclosure__inner">
-    <div class="xbt-disclosure__header">
-      <span>⚠</span>
-      <strong>LEGAL DISCLOSURE</strong>
-    </div>
-    <p>
-      All content published on this site — including writeups, walkthroughs, and technical research — is intended
-      <strong>strictly for educational and informational purposes</strong>. The techniques and tools described are
-      discussed solely in the context of authorized environments such as <strong>Hack The Box</strong>,
-      <strong>TryHackMe</strong>, and other legal penetration testing platforms.
-    </p>
-    <p>
-      Applying any of the techniques described here against systems, networks, or infrastructure
-      <strong>without explicit written authorization</strong> is illegal and unethical. The author assumes
-      <strong>no responsibility</strong> for any misuse of the information provided.
-    </p>
-    <p>Always obtain proper authorization before conducting any security assessment. <strong>Struggle responsibly.</strong></p>
-  </div>
-</section>
+</div>
 
 <style>
 /* =========================================================
-   0xBerk Hacker Terminal — visual system
+   0xBerk // Field Log — tokens
    ========================================================= */
 :root {
-  --xbt-bg: #070607;
-  --xbt-panel: #0c0909;
-  --xbt-panel-2: #120c0c;
-  --xbt-border: #33201f;
-  --xbt-green: #d7b36a;
-  --xbt-green-dim: #9e8060;
-  --xbt-cyan: #c7c0ae;
-  --xbt-amber: #9b1c25;
-  --xbt-red: #8d151d;
-  --xbt-text: #ded6c6;
-  --xbt-muted: #877b70;
-  --xbt-mono: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace;
+  --fl-bg: #0a0b0a;
+  --fl-panel: #121412;
+  --fl-border: #23261f;
+  --fl-text: #e4e7de;
+  --fl-muted: #8b8f82;
+  --fl-muted-2: #5f6459;
+  --fl-accent: #cda24c;
+  --fl-accent-dim: rgba(205, 162, 76, 0.14);
+  --fl-ok: #7c9b6e;
+  --fl-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  --fl-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.xbt-boot,
-.xbt-terminal,
-.xbt-status,
-.xbt-command-menu,
-.xbt-posts,
-.xbt-panel,
-.xbt-easter,
-.xbt-contact,
-.xbt-disclosure {
-  margin: 0 0 1.5rem;
-}
+.fl { color: var(--fl-text); font-family: var(--fl-sans); }
+.fl a { color: inherit; }
+.fl ul, .fl dl { margin: 0; padding: 0; list-style: none; }
+.fl dd { margin: 0; }
 
-.xbt-boot__terminal,
-.xbt-terminal,
-.xbt-panel,
-.xbt-easter__output,
-.xbt-contact__inner,
-.xbt-disclosure__inner {
-  background: var(--xbt-panel);
-  border: 1px solid var(--xbt-border);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 14px 45px rgba(0,0,0,.24), 0 0 25px rgba(57,255,136,.025);
-}
-
-.xbt-windowbar {
-  min-height: 38px;
+/* ---------- nav ---------- */
+.fl-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 0 13px;
-  background: #0d1210;
-  border-bottom: 1px solid var(--xbt-border);
-  font-family: var(--xbt-mono);
-  font-size: .68rem;
+  gap: 24px;
+  padding: 14px 4px;
+  margin-bottom: 56px;
+  background: rgba(10, 11, 10, 0.86);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--fl-border);
+  font-family: var(--fl-mono);
+  font-size: 0.78rem;
 }
-
-.xbt-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  flex: 0 0 auto;
-}
-.xbt-dot--red { background: var(--xbt-red); }
-.xbt-dot--amber { background: var(--xbt-amber); }
-.xbt-dot--green { background: var(--xbt-green); box-shadow: 0 0 8px rgba(57,255,136,.5); }
-
-.xbt-windowbar__title {
-  margin-left: 7px;
-  color: var(--xbt-muted);
-}
-.xbt-windowbar__meta {
-  margin-left: auto;
-  color: var(--xbt-green-dim);
-  letter-spacing: .08em;
-}
-
-.xbt-boot__body,
-.xbt-terminal__body {
-  padding: 22px;
-  position: relative;
-}
-
-.xbt-boot__body::after,
-.xbt-terminal::after {
-  content: "";
-  position: absolute;
-  inset: 38px 0 0;
-  pointer-events: none;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(255,255,255,.012) 0,
-    rgba(255,255,255,.012) 1px,
-    transparent 1px,
-    transparent 4px
-  );
-  opacity: .25;
-}
-
-.xbt-ascii {
-  margin: 0 0 20px;
-  overflow-x: auto;
-  color: var(--xbt-green);
-  font-family: var(--xbt-mono);
-  font-size: clamp(.38rem, 1.25vw, .66rem);
-  line-height: 1.15;
-  text-shadow: 0 0 9px rgba(57,255,136,.20);
-}
-
-.xbt-boot__log {
-  border-left: 1px solid #234a38;
-  padding-left: 14px;
-  color: var(--xbt-muted);
-  font-family: var(--xbt-mono);
-  font-size: .75rem;
-  line-height: 1.8;
-}
-
-.xbt-ok { color: var(--xbt-green); }
-.xbt-warn { color: var(--xbt-amber); }
-
-.xbt-promptline,
-.xbt-term-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 16px;
-  font-family: var(--xbt-mono);
-  font-size: .82rem;
-}
-
-.xbt-prompt {
-  color: var(--xbt-green);
-  font-weight: 700;
-  text-shadow: 0 0 7px rgba(57,255,136,.3);
-}
-.xbt-command { color: var(--xbt-text); }
-.xbt-output {
-  color: var(--xbt-muted);
-  padding-left: 1rem;
-  font-family: var(--xbt-mono);
-  font-size: .78rem;
-  line-height: 1.65;
-}
-.xbt-output--accent { color: var(--xbt-cyan); }
-.xbt-cursor {
-  color: var(--xbt-green);
-  animation: xbt-blink 1s step-end infinite;
-}
-@keyframes xbt-blink {
-  50% { opacity: 0; }
-}
-
-.xbt-status {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 9px 12px;
-  border: 1px solid var(--xbt-border);
-  background: #080c0a;
-  color: var(--xbt-muted);
-  font: .65rem var(--xbt-mono);
-}
-.xbt-status__left {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--xbt-green);
-}
-.xbt-online {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--xbt-green);
-  box-shadow: 0 0 8px rgba(57,255,136,.7);
-}
-.xbt-status__items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 12px;
-}
-.xbt-status__items b { color: #536a60; }
-
-.xbt-section-head {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin: 0 0 12px;
-  color: var(--xbt-muted);
-  font: .78rem var(--xbt-mono);
-  letter-spacing: .03em;
-}
-.xbt-section-head__prompt {
-  color: var(--xbt-green);
-  font-weight: 700;
-}
-
-.xbt-command-grid,
-.xbt-post-grid,
-.xbt-cert-grid,
-.xbt-lab-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 12px;
-}
-
-.xbt-command-card,
-.xbt-post-card,
-.xbt-cert,
-.xbt-lab {
-  position: relative;
-  display: block;
-  background: var(--xbt-panel-2);
-  border: 1px solid var(--xbt-border);
-  border-radius: 7px;
-  padding: 16px;
-  color: inherit;
+.fl-nav__mark {
+  font-weight: 600;
+  letter-spacing: 0.02em;
   text-decoration: none !important;
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  color: var(--fl-text) !important;
+}
+.fl-nav__mark span { color: var(--fl-accent); }
+.fl-caret {
+  display: inline-block;
+  width: 7px;
+  height: 1.05em;
+  margin-left: 3px;
+  background: var(--fl-accent);
+  vertical-align: -0.15em;
+  animation: fl-blink 1.1s step-end infinite;
+}
+.fl-nav__links {
+  display: flex;
+  gap: 18px;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+.fl-nav__links a {
+  color: var(--fl-muted) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.03em;
+  transition: color .15s ease;
+}
+.fl-nav__links a:hover { color: var(--fl-accent) !important; }
+.fl-nav__status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--fl-muted);
+  letter-spacing: 0.04em;
+}
+.fl-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--fl-ok);
+  box-shadow: 0 0 6px rgba(124,155,110,.6);
 }
 
-.xbt-command-card:hover,
-.xbt-post-card:hover,
-.xbt-cert:hover,
-.xbt-lab:hover {
-  transform: translateY(-2px);
-  border-color: #2c5944;
-  box-shadow: 0 8px 25px rgba(0,0,0,.28), 0 0 18px rgba(57,255,136,.05);
-}
+@keyframes fl-blink { 50% { opacity: 0; } }
 
-.xbt-command-card__num {
-  color: #43564e;
-  font: .62rem var(--xbt-mono);
+/* ---------- hero ---------- */
+.fl-hero {
+  padding: 8px 4px 48px;
+  max-width: 720px;
 }
-.xbt-command-card__cmd {
+.fl-hero__eyebrow {
+  margin: 0 0 14px;
+  color: var(--fl-accent);
+  font-family: var(--fl-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.fl-hero__title {
+  margin: 0 0 18px !important;
+  color: var(--fl-text) !important;
+  font-family: var(--fl-sans) !important;
+  font-weight: 600 !important;
+  font-size: clamp(1.9rem, 4.4vw, 2.7rem) !important;
+  line-height: 1.2 !important;
+  border: 0 !important;
+  letter-spacing: -0.01em;
+}
+.fl-hero__lede {
+  margin: 0 0 26px;
+  color: var(--fl-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+.fl-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fl-mono);
+  font-size: 0.82rem;
+  color: var(--fl-muted);
+}
+.fl-hero__stats strong { color: var(--fl-text); font-weight: 600; }
+.fl-sep { color: var(--fl-muted-2); }
+
+/* ---------- sections ---------- */
+.fl-section {
+  padding: 30px 4px;
+  border-top: 1px solid var(--fl-border);
+}
+.fl-section--contact { padding-bottom: 44px; }
+
+.fl-log {
+  margin: 0 0 18px;
+  color: var(--fl-muted-2);
+  font-family: var(--fl-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+}
+.fl-log::before { content: ""; }
+
+.fl-section__body { max-width: 760px; }
+
+/* ---------- about ---------- */
+.fl-about p {
+  margin: 0 0 14px;
+  color: var(--fl-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+.fl-about p:last-child { margin-bottom: 0; }
+.fl-about strong { color: var(--fl-text); }
+
+/* ---------- certifications ---------- */
+.fl-cert-list { display: flex; flex-direction: column; gap: 18px; }
+.fl-cert__row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  font-family: var(--fl-mono);
+}
+.fl-cert__code {
+  color: var(--fl-accent);
+  font-weight: 600;
+  font-size: 0.86rem;
+  min-width: 62px;
+}
+.fl-cert__name {
+  color: var(--fl-text);
+  font-family: var(--fl-sans);
+  font-size: 0.92rem;
+  margin-right: auto;
+}
+.fl-cert__state {
+  color: var(--fl-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+.fl-cert__state--done { color: var(--fl-ok); }
+.fl-bar {
+  height: 2px;
+  margin-top: 8px;
+  background: var(--fl-border);
+}
+.fl-bar span { display: block; height: 100%; background: var(--fl-accent); }
+
+/* ---------- writeups ---------- */
+.fl-post-list { display: flex; flex-direction: column; }
+.fl-post { border-bottom: 1px solid var(--fl-border); }
+.fl-post:first-child { border-top: 1px solid var(--fl-border); }
+.fl-post__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 4px;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: padding-left .15s ease;
+}
+.fl-post__link:hover { padding-left: 8px; }
+.fl-post__link:hover .fl-post__arrow { opacity: 1; transform: translateX(0); }
+.fl-post__link:hover .fl-post__title { color: var(--fl-accent); }
+.fl-post__date {
+  flex: 0 0 auto;
+  padding-top: 3px;
+  color: var(--fl-muted-2);
+  font-family: var(--fl-mono);
+  font-size: 0.74rem;
+  min-width: 82px;
+}
+.fl-post__main { flex: 1 1 auto; min-width: 0; }
+.fl-post__title {
+  display: block;
+  color: var(--fl-text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color .15s ease;
+}
+.fl-post__desc {
   display: block;
   margin-top: 5px;
-  color: var(--xbt-green);
-  font: .88rem var(--xbt-mono);
-}
-.xbt-command-card__desc {
-  display: block;
-  margin-top: 7px;
-  color: var(--xbt-muted);
-  font-size: .75rem;
-}
-
-.xbt-post-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-
-.xbt-post-card__header,
-.xbt-post-card__footer,
-.xbt-cert__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-.xbt-post-card__id {
-  color: var(--xbt-cyan);
-  font: .61rem var(--xbt-mono);
-}
-.xbt-post-card__state,
-.xbt-cert--progress {
-  border-color: #27342f;
-}
-.xbt-cert__progress {
-  color: var(--xbt-amber);
-  font: .59rem var(--xbt-mono);
-  text-shadow: 0 0 7px rgba(255,189,74,.18);
-}
-.xbt-cert--progress .xbt-progress span {
-  background: var(--xbt-amber);
-  box-shadow: 0 0 10px rgba(255,189,74,.28);
-}
-.xbt-cert__ok {
-  color: var(--xbt-green);
-  font: .59rem var(--xbt-mono);
-}
-.xbt-post-card__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 13px 0 8px;
-  color: #667a70;
-  font: .62rem var(--xbt-mono);
-}
-.xbt-post-card__title {
-  margin: 0 0 8px !important;
-  color: var(--xbt-text) !important;
-  font: 700 .98rem/1.4 var(--xbt-mono) !important;
-  border: 0 !important;
-}
-.xbt-post-card__desc {
-  margin: 0 0 16px;
-  color: var(--xbt-muted);
-  font-size: .77rem;
-  line-height: 1.55;
-}
-.xbt-post-card__footer {
-  color: #52665c;
-  font: .62rem var(--xbt-mono);
-}
-.xbt-post-card__footer span:last-child {
-  color: var(--xbt-green);
-}
-
-.xbt-panel {
-  padding: 18px;
-}
-
-.xbt-cert__top {
-  color: var(--xbt-text);
-  font: .82rem var(--xbt-mono);
-}
-.xbt-progress {
-  height: 4px;
-  margin: 13px 0 9px;
-  background: #17221e;
-  overflow: hidden;
-}
-.xbt-progress span {
-  display: block;
-  height: 100%;
-  background: var(--xbt-green);
-  box-shadow: 0 0 10px rgba(57,255,136,.4);
-}
-.xbt-cert small,
-.xbt-lab small {
-  color: var(--xbt-muted);
-  font-size: .68rem;
-}
-
-.xbt-lab {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.xbt-lab__port {
-  color: var(--xbt-cyan);
-  font: .62rem var(--xbt-mono);
-}
-.xbt-lab strong {
-  color: var(--xbt-text);
-  font: .75rem var(--xbt-mono);
-}
-
-.xbt-easter__output {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  padding: 14px 16px;
-  color: var(--xbt-muted);
-  font: .7rem var(--xbt-mono);
-}
-.xbt-error { color: var(--xbt-red); }
-
-.xbt-contact__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px;
-  border-left: 3px solid var(--xbt-green);
-}
-.xbt-contact__eyebrow {
-  color: var(--xbt-green);
-  font: .62rem var(--xbt-mono);
-}
-.xbt-contact h2 {
-  margin: 6px 0 !important;
-  color: var(--xbt-text) !important;
-  font: 700 1.05rem var(--xbt-mono) !important;
-}
-.xbt-contact p {
-  margin: 0;
-  color: var(--xbt-muted);
-  font-size: .78rem;
-}
-.xbt-contact a {
-  white-space: nowrap;
-  padding: 9px 13px;
-  border: 1px solid #2d6048;
-  border-radius: 5px;
-  color: var(--xbt-green) !important;
-  background: #0a1710;
-  font: .7rem var(--xbt-mono);
-  text-decoration: none !important;
-}
-.xbt-contact a:hover {
-  box-shadow: 0 0 18px rgba(57,255,136,.12);
-}
-
-.xbt-disclosure__inner {
-  padding: 17px 19px;
-  border-left: 3px solid var(--xbt-amber);
-}
-.xbt-disclosure__header {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
-  color: var(--xbt-amber);
-  font: .7rem var(--xbt-mono);
-}
-.xbt-disclosure p {
-  margin: 0 0 8px;
-  color: var(--xbt-muted);
-  font-size: .74rem;
+  color: var(--fl-muted);
+  font-size: 0.88rem;
   line-height: 1.6;
 }
-.xbt-disclosure p:last-child { margin-bottom: 0; }
-.xbt-disclosure strong { color: var(--xbt-text); }
+.fl-post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 9px;
+  font-family: var(--fl-mono);
+  font-size: 0.68rem;
+  color: var(--fl-muted-2);
+}
+.fl-post__tags span::before { content: "#"; }
+.fl-post__arrow {
+  flex: 0 0 auto;
+  padding-top: 3px;
+  color: var(--fl-accent);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .15s ease, transform .15s ease;
+}
+.fl-more {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--fl-accent) !important;
+  font-family: var(--fl-mono);
+  font-size: 0.8rem;
+  text-decoration: none !important;
+}
+.fl-empty { color: var(--fl-muted); font-size: 0.92rem; }
 
-@media (max-width: 768px) {
-  .xbt-command-grid,
-  .xbt-post-grid,
-  .xbt-cert-grid,
-  .xbt-lab-grid {
-    grid-template-columns: 1fr;
-  }
-  .xbt-status {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .xbt-status__items {
-    justify-content: flex-start;
-  }
-  .xbt-contact__inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .xbt-ascii {
-    font-size: .34rem;
-  }
+/* ---------- labs ---------- */
+.fl-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 22px 32px;
+}
+.fl-fact dt {
+  color: var(--fl-accent);
+  font-family: var(--fl-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+.fl-fact dd {
+  color: var(--fl-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ---------- contact ---------- */
+.fl-contact p {
+  margin: 0 0 16px;
+  color: var(--fl-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  max-width: 54ch;
+}
+.fl-contact__link {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--fl-accent);
+  border-radius: 6px;
+  background: var(--fl-accent-dim);
+  color: var(--fl-accent) !important;
+  font-family: var(--fl-mono);
+  font-size: 0.82rem;
+  text-decoration: none !important;
+  transition: background .15s ease;
+}
+.fl-contact__link:hover { background: rgba(205,162,76,0.24); }
+
+/* ---------- footer ---------- */
+.fl-footer {
+  padding: 26px 4px 6px;
+  border-top: 1px solid var(--fl-border);
+}
+.fl-disclosure summary {
+  cursor: pointer;
+  color: var(--fl-muted);
+  font-family: var(--fl-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+.fl-disclosure p {
+  margin: 12px 0 0;
+  color: var(--fl-muted-2);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+.fl-footer__sig {
+  margin: 22px 0 0;
+  color: var(--fl-muted-2);
+  font-family: var(--fl-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 640px) {
+  .fl-nav { gap: 14px; flex-wrap: wrap; }
+  .fl-nav__links { gap: 12px; order: 3; width: 100%; }
+  .fl-facts { grid-template-columns: 1fr; }
+  .fl-post__link { flex-direction: column; gap: 4px; }
+  .fl-post__date { min-width: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .xbt-cursor { animation: none; }
-  .xbt-command-card,
-  .xbt-post-card,
-  .xbt-cert,
-  .xbt-lab { transition: none; }
+  .fl-caret { animation: none; }
+  .fl-post__link, .fl-post__title, .fl-post__arrow, .fl-contact__link { transition: none; }
 }
 </style>
-
-
-<style>
-/* 0xBerk // The Struggler — dark grimoire + terminal */
-.xbt-boot__terminal,.xbt-terminal,.xbt-panel,.xbt-easter__output,.xbt-contact__inner,.xbt-disclosure__inner{
-  border-color:#33201f;
-  box-shadow:0 18px 55px rgba(0,0,0,.45),inset 0 1px 0 rgba(222,214,198,.025);
-}
-.xbt-windowbar{background:linear-gradient(90deg,rgba(155,28,37,.09),transparent 55%),#100b0b;border-bottom-color:#33201f}
-.xbt-windowbar__meta{color:#9b1c25;letter-spacing:.14em}
-.xbt-boot__body,.xbt-terminal__body,.xbt-panel{
-  background:radial-gradient(circle at 80% 10%,rgba(155,28,37,.045),transparent 32%),radial-gradient(circle at 10% 90%,rgba(215,179,106,.025),transparent 30%),var(--xbt-panel);
-}
-.xbt-ascii{color:#d7b36a;text-shadow:0 0 8px rgba(215,179,106,.12),2px 2px 0 rgba(155,28,37,.10)}
-.xbt-boot__log{border-left-color:#4a2b29}.xbt-ok{color:#d7b36a}.xbt-warn{color:#9b1c25}
-.xbt-prompt,.xbt-section-head__prompt,.xbt-command-card__cmd,.xbt-post-card__footer span:last-child{color:#d7b36a}
-.xbt-prompt{text-shadow:0 0 8px rgba(215,179,106,.18)}
-.xbt-output--accent,.xbt-post-card__id,.xbt-lab__port{color:#c7c0ae}
-.xbt-online{background:#9b1c25!important;box-shadow:0 0 9px rgba(155,28,37,.55)}
-.xbt-status{background:#0b0808;border-color:#33201f}.xbt-status__left{color:#d7b36a}
-.xbt-command-card,.xbt-post-card,.xbt-cert,.xbt-lab{background:linear-gradient(135deg,rgba(155,28,37,.025),transparent 55%),#100b0b;border-color:#33201f}
-.xbt-command-card:hover,.xbt-post-card:hover,.xbt-cert:hover,.xbt-lab:hover{border-color:#69453f;box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 22px rgba(155,28,37,.08)}
-.xbt-post-card{border-left:2px solid #4a2b29}.xbt-post-card:hover{border-left-color:#9b1c25}.xbt-post-card__state{color:#9b1c25}
-.xbt-cert__ok{color:#d7b36a}.xbt-cert--progress{border-color:#4a2b29}.xbt-cert__progress{color:#9b1c25}
-.xbt-progress{background:#211312}.xbt-progress span{background:#d7b36a;box-shadow:0 0 9px rgba(215,179,106,.22)}
-.xbt-cert--progress .xbt-progress span{background:#9b1c25;box-shadow:0 0 9px rgba(155,28,37,.30)}
-.xbt-lab strong,.xbt-post-card__title,.xbt-contact h2{color:#ded6c6!important}
-.xbt-easter__output{border-left:3px solid #9b1c25}.xbt-error{color:#9b1c25}
-.xbt-contact__inner{border-left-color:#9b1c25}.xbt-contact__eyebrow{color:#9b1c25}
-.xbt-contact a{border-color:#5a302f;color:#d7b36a!important;background:#140b0b}.xbt-contact a:hover{border-color:#9b1c25;box-shadow:0 0 18px rgba(155,28,37,.15)}
-.xbt-section-head{border-bottom:1px solid #2a1b1a;padding-bottom:7px}.xbt-section-head::after{content:"†";margin-left:auto;color:#5d302e;font-family:Georgia,serif}
-@media(max-width:768px){.xbt-section-head::after{display:none}}
-</style>
-
-<script>
-(() => {
-  // Small visual boot sequence; no external dependencies and safe for Jekyll.
-  const boot = document.querySelector('.xbt-boot__log');
-  if (!boot) return;
-
-  const lines = Array.from(boot.children);
-  lines.forEach((line, i) => {
-    line.style.opacity = '0';
-    line.style.transform = 'translateX(-4px)';
-    setTimeout(() => {
-      line.style.transition = 'opacity .25s ease, transform .25s ease';
-      line.style.opacity = '1';
-      line.style.transform = 'translateX(0)';
-    }, 120 + i * 85);
-  });
-})();
-</script>
