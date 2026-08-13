@@ -186,19 +186,39 @@ layout: default
 
   <div class="xbt-cert-grid">
     <div class="xbt-cert">
-      <div class="xbt-cert__top"><span>CPTS</span><span class="xbt-cert__ok">VERIFIED</span></div>
+      <div class="xbt-cert__top">
+        <span>CPTS</span>
+        <span class="xbt-cert__ok">VERIFIED</span>
+      </div>
       <div class="xbt-progress"><span style="width:100%"></span></div>
-      <small>Certified Penetration Testing Specialist</small>
+      <small>Certified Penetration Testing Specialist // COMPLETE</small>
     </div>
-    <div class="xbt-cert">
-      <div class="xbt-cert__top"><span>CRTO</span><span class="xbt-cert__ok">VERIFIED</span></div>
-      <div class="xbt-progress"><span style="width:100%"></span></div>
-      <small>Certified Red Team Operator</small>
+
+    <div class="xbt-cert xbt-cert--progress">
+      <div class="xbt-cert__top">
+        <span>CRTO</span>
+        <span class="xbt-cert__progress">IN PROGRESS</span>
+      </div>
+      <div class="xbt-progress"><span style="width:55%"></span></div>
+      <small>Certified Red Team Operator // OPERATOR MODULE</small>
     </div>
-    <div class="xbt-cert">
-      <div class="xbt-cert__top"><span>CDSA</span><span class="xbt-cert__ok">VERIFIED</span></div>
-      <div class="xbt-progress"><span style="width:100%"></span></div>
-      <small>Certified Defensive Security Analyst</small>
+
+    <div class="xbt-cert xbt-cert--progress">
+      <div class="xbt-cert__top">
+        <span>OCP</span>
+        <span class="xbt-cert__progress">IN PROGRESS</span>
+      </div>
+      <div class="xbt-progress"><span style="width:40%"></span></div>
+      <small>Offensive security certification track // IN TRAINING</small>
+    </div>
+
+    <div class="xbt-cert xbt-cert--progress">
+      <div class="xbt-cert__top">
+        <span>ARTOC</span>
+        <span class="xbt-cert__progress">IN PROGRESS</span>
+      </div>
+      <div class="xbt-progress"><span style="width:30%"></span></div>
+      <small>Advanced Red Team Operator track // IN TRAINING</small>
     </div>
   </div>
 </section>
@@ -540,6 +560,18 @@ layout: default
   font: .61rem var(--xbt-mono);
 }
 .xbt-post-card__state,
+.xbt-cert--progress {
+  border-color: #27342f;
+}
+.xbt-cert__progress {
+  color: var(--xbt-amber);
+  font: .59rem var(--xbt-mono);
+  text-shadow: 0 0 7px rgba(255,189,74,.18);
+}
+.xbt-cert--progress .xbt-progress span {
+  background: var(--xbt-amber);
+  box-shadow: 0 0 10px rgba(255,189,74,.28);
+}
 .xbt-cert__ok {
   color: var(--xbt-green);
   font: .59rem var(--xbt-mono);
