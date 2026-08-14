@@ -1,7 +1,6 @@
 ---
 title: "HTB Forest Writeup"
 date: 2026-06-23
-tags: [oscp, active-directory, pentest]
 ---
 
 ## Summary
