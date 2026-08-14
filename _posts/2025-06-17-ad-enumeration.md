@@ -1,7 +1,6 @@
 ---
 title: "AD Enumeration Cheat Sheet"
 date: 2026-06-17
-tags: [oscp, active-directory, pentest, cheat-sheet]
 ---
 
 # Active Directory Enumeration Cheat Sheet (No Credentials)
