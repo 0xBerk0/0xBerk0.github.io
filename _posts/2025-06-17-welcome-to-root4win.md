@@ -1,11 +1,6 @@
 ---
 title: Welcome to Root4Win
 date: 2026-03-15 20:00:00 +0000
-categories:
-  - Notes
-tags:
-  - Blog
-  - Introduction
 ---
 
 # Welcome to Root4Win
