@@ -2,8 +2,6 @@
 layout: post
 title: "HackTheBox — Administrator"
 date: 2026-06-27
-categories: [HackTheBox, Active Directory, Windows]
-tags: [htb, ctf, active-directory, kerberoast, bloodhound, dcsync, ftp, winrm]
 difficulty: Medium
 os: Windows
 ---
