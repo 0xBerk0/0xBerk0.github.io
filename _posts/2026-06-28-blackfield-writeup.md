@@ -2,8 +2,6 @@
 layout: post
 title: "HackTheBox — Blackfield"
 date: 2026-06-28
-categories: [HackTheBox, Active Directory, Windows]
-tags: [htb, ctf, active-directory, asrep-roasting, bloodhound, sebackupprivilege, lsass, ntds, winrm, oscp]
 difficulty: Hard
 os: Windows
 ---
