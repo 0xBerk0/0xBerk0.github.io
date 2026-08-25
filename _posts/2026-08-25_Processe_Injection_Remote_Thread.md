@@ -1,3 +1,8 @@
+---
+title: "Process Injection: CreateRemoteThread"
+date: 2026-08-25
+---
+
 ```c
 #include <windows.h>
 #include <stdio.h>
