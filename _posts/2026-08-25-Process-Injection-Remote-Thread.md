@@ -3,7 +3,7 @@ layout: post
 title: "Process Injection: CreateRemoteThread"
 date: 2026-08-25
 ---
-
+# Process Injection: CreateRemoteThread
 ```c
 #include <windows.h>
 #include <stdio.h>
