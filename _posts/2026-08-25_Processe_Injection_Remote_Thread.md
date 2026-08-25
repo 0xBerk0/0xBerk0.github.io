@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Process Injection: CreateRemoteThread"
 date: 2026-08-25
 ---
