@@ -1,10 +1,3 @@
----
-layout: post
-title: "HackTheBox — Certified"
-date: 2026-08-30
-difficulty: Medium
-os: Windows
----
 
 # HackTheBox — Certified
 
