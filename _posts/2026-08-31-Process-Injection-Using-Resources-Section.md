@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Process Injection: CreateRemoteThread - Using Resources Section (NOT OPSEC)"
+title: "Process Injection: Using Resources Section (NOT OPSEC)"
 date: 2026-08-31
 ---
-# Process Injection: CreateRemoteThread - Using Resources Section (NOT OPSEC)
+# Process Injection: Using Resources Section (NOT OPSEC)
 
 
 
