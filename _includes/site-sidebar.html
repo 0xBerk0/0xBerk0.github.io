@@ -16,6 +16,12 @@
         <a href="{{ tab.url | relative_url }}"{% if tab.url == page.url %} aria-current="page"{% endif %}>{{ tab.title | downcase }}</a>
       {% endunless %}
     {% endfor %}
+
+    <span class="site-nav__label site-nav__label--group">practice areas</span>
+    <a href="{{ '/' | relative_url }}#red-team">red team</a>
+    <a href="{{ '/' | relative_url }}#active-directory">active directory</a>
+    <a href="{{ '/' | relative_url }}#web-security">web security</a>
+    <a href="{{ '/' | relative_url }}#labs">labs</a>
   </nav>
 
   <div class="site-rail__footer" aria-label="Social links">

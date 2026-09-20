@@ -124,6 +124,10 @@ a:hover { color: var(--signal); }
   font-size: .64rem;
 }
 
+.site-nav__label--group {
+  margin-top: 24px;
+}
+
 .site-nav a {
   display: flex;
   align-items: center;
@@ -333,6 +337,73 @@ a:hover { color: var(--signal); }
 .capability__title { margin: 0 0 8px; font-family: var(--mono); font-size: .85rem; font-weight: 600; }
 .capability p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.55; }
 
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.topic-panel {
+  min-height: 250px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: rgba(18, 28, 34, .72);
+}
+
+.topic-panel--quiet {
+  border-style: dashed;
+  background: transparent;
+}
+
+.topic-panel__label {
+  margin: 0 0 18px;
+  color: var(--signal);
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.topic-panel h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.topic-panel__summary {
+  max-width: 42ch;
+  margin: 10px 0 22px;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.6;
+}
+
+.topic-panel__links {
+  display: grid;
+  gap: 8px;
+}
+
+.topic-panel__links a {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: .7rem;
+  text-decoration: none;
+}
+
+.topic-panel__links a span {
+  color: var(--signal);
+}
+
+.topic-panel__links a:hover {
+  color: var(--signal);
+}
+
 .cert-list { display: grid; gap: 12px; }
 .cert-item {
   display: grid;
@@ -464,7 +535,7 @@ a:hover { color: var(--signal); }
   .content-section { padding: 58px 0; }
   .content-section__heading { display: block; }
   .content-section__heading h2 { margin-top: 8px; }
-  .stats-grid, .capability-grid, .archive-grid { grid-template-columns: 1fr; }
+  .stats-grid, .capability-grid, .topic-grid, .archive-grid { grid-template-columns: 1fr; }
   .cert-item { grid-template-columns: 58px minmax(0, 1fr); }
   .cert-item__state { grid-column: 2; text-align: left; }
   .cert-bar { grid-column: 1 / -1; }
