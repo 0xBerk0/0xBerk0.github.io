@@ -2,610 +2,134 @@
 layout: default
 ---
 
-<!-- =========================================================
-     0xBerk // FIELD LOG
-     Monopage portfolio — Jekyll/Chirpy, Liquid-safe
-     ========================================================= -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-<div class="fl">
-
-  <!-- ============ NAV ============ -->
-  <nav class="fl-nav">
-    <a href="#top" class="fl-nav__mark">0x<span>Berk</span><i class="fl-caret" aria-hidden="true"></i></a>
-    <div class="fl-nav__links">
-      <a href="#about">whoami</a>
-      <a href="#certifications">certs</a>
-      <a href="#labs">labs</a>
-      <a href="{{ '/archives/' | relative_url }}">writeups</a>
-      <a href="#contact">contact</a>
-    </div>
-    <div class="fl-nav__status"><span class="fl-dot"></span>active</div>
-  </nav>
-
-  <!-- ============ HERO ============ -->
-  <header id="top" class="fl-hero">
-    <p class="fl-hero__eyebrow">offensive security researcher &middot; penetration tester</p>
-    <h1 class="fl-hero__title">Hello, I'm António Rodrigues.</h1>
-    <p class="fl-hero__lede">
+<header class="home-hero">
+  <div>
+    <p class="eyebrow">offensive security researcher · penetration tester</p>
+    <h1>António<br><span>Rodrigues.</span></h1>
+    <p class="home-hero__lede">
       I help teams understand how their environments fail. My work focuses on Active Directory,
       red team operations and internal network compromise, with a practical bias toward clear
       findings, repeatable tradecraft and continuous learning.
     </p>
-    <div class="fl-hero__actions">
-      <a href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener" class="fl-button">connect on LinkedIn &rarr;</a>
-      <a href="{{ '/archives/' | relative_url }}" class="fl-text-link">explore technical writeups &rarr;</a>
+    <div class="home-hero__actions">
+      <a class="button" href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener">connect on LinkedIn</a>
+      <a class="text-link" href="{{ '/archives/' | relative_url }}">browse the writeups</a>
     </div>
-    <div class="fl-hero__stats">
-      <span><strong>100+</strong> machines</span>
-      <span class="fl-sep">/</span>
-      <span><strong>2</strong> pro labs</span>
-      <span class="fl-sep">/</span>
-      <span><strong>CPTS</strong> certified</span>
-      <span class="fl-sep">/</span>
-      <span><strong>{{ site.posts | size }}</strong> published writeups</span>
-    </div>
-  </header>
+  </div>
 
-  <!-- ============ SNAPSHOT ============ -->
-  <section class="fl-snapshot" aria-label="Professional snapshot">
-    <div class="fl-snapshot__item">
-      <span class="fl-snapshot__label">focus</span>
-      <strong>Active Directory</strong>
-      <span>Kerberos, ADCS and delegation abuse</span>
-    </div>
-    <div class="fl-snapshot__item">
-      <span class="fl-snapshot__label">approach</span>
-      <strong>Attack paths</strong>
-      <span>From initial access to impact</span>
-    </div>
-    <div class="fl-snapshot__item">
-      <span class="fl-snapshot__label">proof of work</span>
-      <strong>CPTS &amp; CRTO</strong>
-      <span>Hands-on certifications, documented in depth</span>
-    </div>
-  </section>
+  <div class="home-hero__aside" aria-label="Profile signals">
+    <div class="signal-line"><span>handle</span><strong>0xBerk</strong></div>
+    <div class="signal-line"><span>location</span><strong>Portugal</strong></div>
+    <div class="signal-line"><span>machines</span><strong>100+</strong></div>
+    <div class="signal-line"><span>pro labs</span><strong>2</strong></div>
+    <div class="signal-line"><span>published</span><strong>{{ site.posts | size }} notes</strong></div>
+  </div>
+</header>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="fl-section">
-    <p class="fl-log">[00:00:04] $ whoami</p>
-    <div class="fl-section__body fl-about">
-      <p>
-        I'm António — under the handle <strong>0xBerk</strong> — an offensive security researcher
-        based in Portugal, focused on Active Directory attack paths, Kerberos abuse and internal
-        network compromise. Most of what I know came from getting stuck for hours on a box,
-        refusing to look at the walkthrough, and eventually understanding why the exploit worked.
-      </p>
-      <p>
-        This page is a concise overview of my technical focus, certifications and practical work.
-        The full writeup archive is available separately for anyone who wants to go deeper into
-        the methodology and lessons behind each engagement.
-      </p>
-    </div>
-  </section>
+<section class="content-section" id="about">
+  <div class="content-section__heading">
+    <p class="section-kicker">01 / about</p>
+    <h2>Technical work, documented clearly.</h2>
+  </div>
+  <div class="about-copy">
+    <p>
+      I'm António — under the handle <strong>0xBerk</strong> — an offensive security researcher
+      based in Portugal, focused on Active Directory attack paths, Kerberos abuse and internal
+      network compromise. Most of what I know came from getting stuck for hours on a box,
+      refusing to look at the walkthrough, and eventually understanding why the exploit worked.
+    </p>
+    <p>
+      This page is a concise overview of my technical focus, certifications and practical work.
+      The full writeup archive is available separately for anyone who wants to go deeper into
+      the methodology and lessons behind each engagement.
+    </p>
+  </div>
+</section>
 
-  <!-- ============ CERTIFICATIONS ============ -->
-  <section id="certifications" class="fl-section">
-    <p class="fl-log">[00:00:11] $ cat ~/certs.log</p>
-    <div class="fl-section__body">
-      <ul class="fl-cert-list">
-        <li class="fl-cert">
-          <div class="fl-cert__row">
-            <span class="fl-cert__code">CPTS</span>
-            <span class="fl-cert__name">Certified Penetration Testing Specialist</span>
-            <span class="fl-cert__state fl-cert__state--done">verified</span>
-          </div>
-          <div class="fl-bar"><span style="width:100%"></span></div>
-        </li>
-        <li class="fl-cert">
-          <div class="fl-cert__row">
-            <span class="fl-cert__code">CRTO</span>
-            <span class="fl-cert__name">Certified Red Team Operator</span>
-             <span class="fl-cert__state fl-cert__state--done">verified</span>
-          </div>
-          <div class="fl-bar"><span style="width:100%"></span></div>
-        </li>
-        <li class="fl-cert">
-          <div class="fl-cert__row">
-            <span class="fl-cert__code">ODPC</span>
-            <span class="fl-cert__name">Offensive Development Practitioner Certification</span>
-            <span class="fl-cert__state">in progress &middot; 40%</span>
-          </div>
-          <div class="fl-bar"><span style="width:40%"></span></div>
-        </li>
-        <li class="fl-cert">
-          <div class="fl-cert__row">
-            <span class="fl-cert__code">ARTOC</span>
-            <span class="fl-cert__name">Advanced Red Team Operator Track</span>
-            <span class="fl-cert__state">in progress &middot; 20%</span>
-          </div>
-          <div class="fl-bar"><span style="width:20%"></span></div>
-        </li>
-      </ul>
+<section class="content-section" id="certifications">
+  <div class="content-section__heading">
+    <p class="section-kicker">02 / credentials</p>
+    <h2>Hands-on certifications in motion.</h2>
+  </div>
+  <div class="cert-list">
+    <div class="cert-item">
+      <span class="cert-item__code">CPTS</span>
+      <span class="cert-item__name">Certified Penetration Testing Specialist</span>
+      <span class="cert-item__state cert-item__state--done">verified</span>
+      <div class="cert-bar"><span style="width:100%"></span></div>
     </div>
-  </section>
-
-  <!-- ============ LABS ============ -->
-  <section id="labs" class="fl-section">
-    <p class="fl-log">[00:00:27] $ history | grep battlegrounds</p>
-    <div class="fl-section__body">
-      <dl class="fl-facts">
-        <div class="fl-fact">
-          <dt>Hack The Box</dt>
-          <dd>100+ retired &amp; active machines compromised across Windows and Linux.</dd>
-        </div>
-        <div class="fl-fact">
-          <dt>Pro Labs</dt>
-          <dd>Dante, P.O.O. — multi-host chains against realistic corporate networks.</dd>
-        </div>
-        <div class="fl-fact">
-          <dt>Web</dt>
-          <dd>Auth flaws, injection, API abuse — mostly as an entry point into internal infra.</dd>
-        </div>
-        <div class="fl-fact">
-          <dt>Active Directory</dt>
-          <dd>Kerberos abuse, ADCS misconfigurations, resource-based constrained delegation.</dd>
-        </div>
-      </dl>
+    <div class="cert-item">
+      <span class="cert-item__code">CRTO</span>
+      <span class="cert-item__name">Certified Red Team Operator</span>
+      <span class="cert-item__state cert-item__state--done">verified</span>
+      <div class="cert-bar"><span style="width:100%"></span></div>
     </div>
-  </section>
+    <div class="cert-item">
+      <span class="cert-item__code">ODPC</span>
+      <span class="cert-item__name">Offensive Development Practitioner Certification</span>
+      <span class="cert-item__state">in progress · 40%</span>
+      <div class="cert-bar"><span style="width:40%"></span></div>
+    </div>
+    <div class="cert-item">
+      <span class="cert-item__code">ARTOC</span>
+      <span class="cert-item__name">Advanced Red Team Operator Track</span>
+      <span class="cert-item__state">in progress · 20%</span>
+      <div class="cert-bar"><span style="width:20%"></span></div>
+    </div>
+  </div>
+</section>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="fl-section fl-section--contact">
-    <p class="fl-log">[00:00:33] $ nc raven -p 443</p>
-    <div class="fl-section__body fl-contact">
-      <p>Research, red team engagements, or just talking through a chain that isn't clicking — reach out.</p>
-      <a href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener" class="fl-contact__link">
-        connect on LinkedIn &rarr;
+<section class="content-section" id="capabilities">
+  <div class="content-section__heading">
+    <p class="section-kicker">03 / capabilities</p>
+    <h2>Where the work gets interesting.</h2>
+  </div>
+  <div class="capability-grid">
+    <div class="capability"><h3 class="capability__title">Hack The Box</h3><p>100+ retired &amp; active machines compromised across Windows and Linux.</p></div>
+    <div class="capability"><h3 class="capability__title">Pro Labs</h3><p>Dante, P.O.O. — multi-host chains against realistic corporate networks.</p></div>
+    <div class="capability"><h3 class="capability__title">Web</h3><p>Auth flaws, injection, API abuse — mostly as an entry point into internal infra.</p></div>
+    <div class="capability"><h3 class="capability__title">Active Directory</h3><p>Kerberos abuse, ADCS misconfigurations, resource-based constrained delegation.</p></div>
+  </div>
+</section>
+
+<section class="content-section" id="notes">
+  <div class="content-section__heading">
+    <p class="section-kicker">04 / latest notes</p>
+    <h2>Recent work from the field.</h2>
+  </div>
+  <div class="notes-preview">
+    {% for post in site.posts limit:5 %}
+      <a class="note-card" href="{{ post.url | relative_url }}">
+        <span class="note-card__meta">{{ post.date | date: "%Y.%m.%d" }}</span>
+        <span>
+          <span class="note-card__title">{{ post.title }}</span>
+          {% if post.description %}<span class="note-card__excerpt">{{ post.description }}</span>{% elsif post.excerpt %}<span class="note-card__excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</span>{% endif %}
+        </span>
+        <span class="note-card__arrow" aria-hidden="true">→</span>
       </a>
-    </div>
-  </section>
+    {% endfor %}
+  </div>
+  <a class="text-link" href="{{ '/archives/' | relative_url }}">view all {{ site.posts | size }} writeups</a>
+</section>
 
-  <!-- ============ FOOTER / DISCLOSURE ============ -->
-  <footer class="fl-footer">
-    <details class="fl-disclosure">
-      <summary>Legal disclosure</summary>
-      <p>
-        All content published here — writeups, walkthroughs and technical research — is for
-        educational purposes only, discussed strictly in the context of authorized platforms
-        such as Hack The Box and TryHackMe. Applying any of these techniques against systems
-        without explicit written authorization is illegal. Always get proper authorization
-        before conducting a security assessment.
-      </p>
-    </details>
-    <p class="fl-footer__sig">0xBerk &middot; struggle. adapt. understand.</p>
-  </footer>
+<section class="content-section contact-section" id="contact">
+  <div>
+    <p class="section-kicker">05 / contact</p>
+    <p>Research, red team engagements, or just talking through a chain that isn't clicking — reach out.</p>
+  </div>
+  <a class="button" href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener">connect on LinkedIn</a>
+</section>
 
-</div>
-
-<style>
-/* =========================================================
-   0xBerk // Field Log — tokens
-   ========================================================= */
-:root {
-  --fl-bg: #0d1215;
-  --fl-panel: #141c20;
-  --fl-border: #26363a;
-  --fl-text: #dce9e4;
-  --fl-muted: #8da49f;
-  --fl-muted-2: #5f7775;
-  --fl-accent: #8bd8c1;
-  --fl-accent-dim: rgba(139, 216, 193, 0.12);
-  --fl-ok: #a9d6a1;
-  --fl-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
-  --fl-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.fl {
-  color: var(--fl-text);
-  font-family: var(--fl-sans);
-  max-width: 980px;
-  margin: 0 auto;
-}
-.fl a { color: inherit; }
-.fl ul, .fl dl { margin: 0; padding: 0; list-style: none; }
-.fl dd { margin: 0; }
-
-/* ---------- nav ---------- */
-.fl-nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 14px 4px;
-  margin-bottom: 72px;
-  background: rgba(13, 18, 21, 0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--fl-border);
-  font-family: var(--fl-mono);
-  font-size: 0.78rem;
-}
-.fl-nav__mark {
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-decoration: none !important;
-  color: var(--fl-text) !important;
-}
-.fl-nav__mark span { color: var(--fl-accent); }
-.fl-caret {
-  display: inline-block;
-  width: 7px;
-  height: 1.05em;
-  margin-left: 3px;
-  background: var(--fl-accent);
-  vertical-align: -0.15em;
-  animation: fl-blink 1.1s step-end infinite;
-}
-.fl-nav__links {
-  display: flex;
-  gap: 18px;
-  margin-right: auto;
-  flex-wrap: wrap;
-}
-.fl-nav__links a {
-  color: var(--fl-muted) !important;
-  text-decoration: none !important;
-  letter-spacing: 0.03em;
-  transition: color .15s ease;
-}
-.fl-nav__links a:hover { color: var(--fl-accent) !important; }
-.fl-nav__status {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--fl-muted);
-  letter-spacing: 0.04em;
-}
-.fl-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--fl-ok);
-  box-shadow: 0 0 6px rgba(124,155,110,.6);
-}
-
-@keyframes fl-blink { 50% { opacity: 0; } }
-
-/* ---------- hero ---------- */
-.fl-hero {
-  position: relative;
-  padding: 8px 4px 52px;
-  max-width: 840px;
-}
-.fl-hero::before {
-  content: '01 / profile';
-  position: absolute;
-  top: 12px;
-  right: 4px;
-  color: var(--fl-muted-2);
-  font-family: var(--fl-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.fl-hero__eyebrow {
-  margin: 0 0 14px;
-  color: var(--fl-accent);
-  font-family: var(--fl-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-.fl-hero__title {
-  margin: 0 0 18px !important;
-  color: var(--fl-text) !important;
-  font-family: var(--fl-sans) !important;
-  font-weight: 600 !important;
-  font-size: clamp(2.1rem, 5vw, 3.5rem) !important;
-  line-height: 1.2 !important;
-  border: 0 !important;
-  letter-spacing: -0.025em;
-}
-.fl-hero__lede {
-  margin: 0 0 26px;
-  color: var(--fl-muted);
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 60ch;
-}
-.fl-hero__actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px 20px;
-  margin-bottom: 28px;
-}
-.fl-button {
-  display: inline-block;
-  padding: 10px 16px;
-  border: 1px solid var(--fl-accent);
-  border-radius: 6px;
-  background: var(--fl-accent-dim);
-  color: var(--fl-accent) !important;
-  font-family: var(--fl-mono);
-  font-size: 0.8rem;
-  text-decoration: none !important;
-  transition: background .15s ease;
-}
-.fl-button:hover { background: rgba(205,162,76,0.24); }
-.fl-text-link {
-  color: var(--fl-muted) !important;
-  font-family: var(--fl-mono);
-  font-size: 0.78rem;
-  text-decoration: none !important;
-}
-.fl-text-link:hover { color: var(--fl-accent) !important; }
-.fl-hero__stats {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--fl-mono);
-  font-size: 0.82rem;
-  color: var(--fl-muted);
-}
-.fl-hero__stats strong { color: var(--fl-text); font-weight: 600; }
-.fl-sep { color: var(--fl-muted-2); }
-
-/* ---------- snapshot ---------- */
-.fl-snapshot {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  margin: 0 0 28px;
-  background: var(--fl-border);
-  border: 1px solid var(--fl-border);
-}
-.fl-snapshot__item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  min-height: 112px;
-  padding: 16px;
-  background: var(--fl-panel);
-}
-.fl-snapshot__label {
-  color: var(--fl-muted-2);
-  font-family: var(--fl-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.fl-snapshot__item strong {
-  color: var(--fl-text);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-.fl-snapshot__item > span:last-child {
-  margin-top: auto;
-  color: var(--fl-muted);
-  font-size: 0.78rem;
-  line-height: 1.45;
-}
-
-/* ---------- sections ---------- */
-.fl-section {
-  position: relative;
-  padding: 38px 4px;
-  border-top: 1px solid var(--fl-border);
-}
-.fl-section::after {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 42px;
-  height: 1px;
-  background: var(--fl-accent);
-}
-.fl-section--contact { padding-bottom: 44px; }
-
-.fl-log {
-  margin: 0 0 18px;
-  color: var(--fl-muted-2);
-  font-family: var(--fl-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.02em;
-}
-.fl-log::before { content: ""; }
-
-.fl-section__body { max-width: 760px; }
-
-/* ---------- about ---------- */
-.fl-about p {
-  margin: 0 0 14px;
-  color: var(--fl-muted);
-  font-size: 0.98rem;
-  line-height: 1.75;
-}
-.fl-about p:last-child { margin-bottom: 0; }
-.fl-about strong { color: var(--fl-text); }
-
-/* ---------- certifications ---------- */
-.fl-cert-list { display: flex; flex-direction: column; gap: 18px; }
-.fl-cert__row {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  font-family: var(--fl-mono);
-}
-.fl-cert__code {
-  color: var(--fl-accent);
-  font-weight: 600;
-  font-size: 0.86rem;
-  min-width: 62px;
-}
-.fl-cert__name {
-  color: var(--fl-text);
-  font-family: var(--fl-sans);
-  font-size: 0.92rem;
-  margin-right: auto;
-}
-.fl-cert__state {
-  color: var(--fl-muted);
-  font-size: 0.72rem;
-  letter-spacing: 0.03em;
-}
-.fl-cert__state--done { color: var(--fl-ok); }
-.fl-bar {
-  height: 2px;
-  margin-top: 8px;
-  background: var(--fl-border);
-}
-.fl-bar span { display: block; height: 100%; background: var(--fl-accent); }
-
-/* ---------- writeups ---------- */
-.fl-post-list { display: flex; flex-direction: column; }
-.fl-post { border-bottom: 1px solid var(--fl-border); }
-.fl-post:first-child { border-top: 1px solid var(--fl-border); }
-.fl-post__link {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  padding: 18px 4px;
-  text-decoration: none !important;
-  color: inherit !important;
-  transition: padding-left .15s ease;
-}
-.fl-post__link:hover { padding-left: 8px; }
-.fl-post__link:hover .fl-post__arrow { opacity: 1; transform: translateX(0); }
-.fl-post__link:hover .fl-post__title { color: var(--fl-accent); }
-.fl-post__date {
-  flex: 0 0 auto;
-  padding-top: 3px;
-  color: var(--fl-muted-2);
-  font-family: var(--fl-mono);
-  font-size: 0.74rem;
-  min-width: 82px;
-}
-.fl-post__main { flex: 1 1 auto; min-width: 0; }
-.fl-post__title {
-  display: block;
-  color: var(--fl-text);
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color .15s ease;
-}
-.fl-post__desc {
-  display: block;
-  margin-top: 5px;
-  color: var(--fl-muted);
-  font-size: 0.88rem;
-  line-height: 1.6;
-}
-.fl-post__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 9px;
-  font-family: var(--fl-mono);
-  font-size: 0.68rem;
-  color: var(--fl-muted-2);
-}
-.fl-post__tags span::before { content: "#"; }
-.fl-post__arrow {
-  flex: 0 0 auto;
-  padding-top: 3px;
-  color: var(--fl-accent);
-  opacity: 0;
-  transform: translateX(-4px);
-  transition: opacity .15s ease, transform .15s ease;
-}
-.fl-more {
-  display: inline-block;
-  margin-top: 18px;
-  color: var(--fl-accent) !important;
-  font-family: var(--fl-mono);
-  font-size: 0.8rem;
-  text-decoration: none !important;
-}
-.fl-empty { color: var(--fl-muted); font-size: 0.92rem; }
-
-/* ---------- labs ---------- */
-.fl-facts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 22px 32px;
-}
-.fl-fact dt {
-  color: var(--fl-accent);
-  font-family: var(--fl-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.03em;
-  margin-bottom: 6px;
-}
-.fl-fact dd {
-  color: var(--fl-muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* ---------- contact ---------- */
-.fl-contact p {
-  margin: 0 0 16px;
-  color: var(--fl-muted);
-  font-size: 0.98rem;
-  line-height: 1.7;
-  max-width: 54ch;
-}
-.fl-contact__link {
-  display: inline-block;
-  padding: 10px 16px;
-  border: 1px solid var(--fl-accent);
-  border-radius: 6px;
-  background: var(--fl-accent-dim);
-  color: var(--fl-accent) !important;
-  font-family: var(--fl-mono);
-  font-size: 0.82rem;
-  text-decoration: none !important;
-  transition: background .15s ease;
-}
-.fl-contact__link:hover { background: rgba(205,162,76,0.24); }
-
-/* ---------- footer ---------- */
-.fl-footer {
-  padding: 26px 4px 6px;
-  border-top: 1px solid var(--fl-border);
-}
-.fl-disclosure summary {
-  cursor: pointer;
-  color: var(--fl-muted);
-  font-family: var(--fl-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.03em;
-}
-.fl-disclosure p {
-  margin: 12px 0 0;
-  color: var(--fl-muted-2);
-  font-size: 0.78rem;
-  line-height: 1.7;
-  max-width: 62ch;
-}
-.fl-footer__sig {
-  margin: 22px 0 0;
-  color: var(--fl-muted-2);
-  font-family: var(--fl-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.03em;
-}
-
-@media (max-width: 640px) {
-  .fl-nav { gap: 14px; flex-wrap: wrap; }
-  .fl-nav__links { gap: 12px; order: 3; width: 100%; }
-  .fl-snapshot { grid-template-columns: 1fr; }
-  .fl-facts { grid-template-columns: 1fr; }
-  .fl-post__link { flex-direction: column; gap: 4px; }
-  .fl-post__date { min-width: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fl-caret { animation: none; }
-  .fl-button, .fl-post__link, .fl-post__title, .fl-post__arrow, .fl-contact__link { transition: none; }
-}
-</style>
+<footer class="site-footer">
+  <details>
+    <summary>Legal disclosure</summary>
+    <p>
+      All content published here — writeups, walkthroughs and technical research — is for
+      educational purposes only, discussed strictly in the context of authorized platforms
+      such as Hack The Box and TryHackMe. Applying any of these techniques against systems
+      without explicit written authorization is illegal. Always get proper authorization
+      before conducting a security assessment.
+    </p>
+  </details>
+  <p>0xBerk · struggle. adapt. understand.</p>
+</footer>

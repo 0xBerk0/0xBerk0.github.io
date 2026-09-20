@@ -1,0 +1,32 @@
+<aside class="site-rail" aria-label="Site navigation">
+  <a class="site-brand" href="{{ '/' | relative_url }}">
+    <img class="site-avatar" src="{{ site.avatar | relative_url }}" width="76" height="76" alt="{{ site.title }} profile image">
+    <span>
+      <span class="site-brand__name">{{ site.title }}</span>
+      <span class="site-brand__tagline">{{ site.tagline }}</span>
+    </span>
+  </a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <span class="site-nav__label">directory</span>
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>home</a>
+    <a href="{{ '/archives/' | relative_url }}"{% if page.url == '/archives/' %} aria-current="page"{% endif %}>writeups</a>
+    {% for tab in site.tabs %}
+      {% unless tab.url == '/archives/' %}
+        <a href="{{ tab.url | relative_url }}"{% if tab.url == page.url %} aria-current="page"{% endif %}>{{ tab.title | downcase }}</a>
+      {% endunless %}
+    {% endfor %}
+  </nav>
+
+  <div class="site-rail__footer" aria-label="Social links">
+    {% for entry in site.data.contact %}
+      {% assign contact_url = entry.url %}
+      {% if entry.type == 'github' and site.github.username %}
+        {% assign contact_url = 'https://github.com/' | append: site.github.username %}
+      {% endif %}
+      {% if contact_url %}
+        <a href="{{ contact_url }}" target="_blank" rel="noopener noreferrer">{{ entry.type }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</aside>
