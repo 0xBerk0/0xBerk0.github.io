@@ -462,6 +462,125 @@ code:not(.highlight code) {
   }
 }
 
+/* Site-wide finishing layer */
+#topbar,
+#topbar-wrapper {
+  background: rgba(11, 17, 20, .92) !important;
+  border-bottom: 1px solid #25363b !important;
+  box-shadow: none !important;
+}
+
+#topbar a,
+#topbar button {
+  color: #8da49f !important;
+}
+
+#topbar a:hover,
+#topbar button:hover {
+  color: #8bd8c1 !important;
+  text-shadow: none;
+}
+
+#panel-wrapper {
+  border-left: 1px solid #25363b !important;
+  background: #0f181c !important;
+}
+
+.post-tail-wrapper,
+.post-navigation,
+.related-posts,
+.share-wrapper,
+.pagination,
+.post-paginator {
+  border-color: #25363b !important;
+}
+
+.post-tail-wrapper {
+  margin-top: 56px;
+  padding-top: 26px;
+}
+
+.post-navigation a,
+.post-paginator a,
+.related-posts a,
+.pagination a {
+  color: #8da49f !important;
+  font-family: var(--font-sans) !important;
+}
+
+.post-navigation a:hover,
+.post-paginator a:hover,
+.related-posts a:hover,
+.pagination a:hover {
+  color: #8bd8c1 !important;
+  text-shadow: none;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-link:hover {
+  border-color: #8bd8c1 !important;
+  background: rgba(139, 216, 193, .1) !important;
+  color: #8bd8c1 !important;
+}
+
+.btn,
+button,
+input,
+select {
+  font-family: var(--font-sans);
+}
+
+button,
+.btn {
+  border-radius: 5px !important;
+}
+
+.site-footer,
+footer.site-footer,
+#footer {
+  max-width: 920px;
+  border-top: 1px solid #25363b !important;
+  background: transparent !important;
+  color: #5f7775 !important;
+  opacity: 1 !important;
+}
+
+.site-footer a,
+footer a {
+  color: #8da49f !important;
+}
+
+.site-footer a:hover,
+footer a:hover {
+  color: #8bd8c1 !important;
+  text-shadow: none;
+}
+
+.breadcrumb,
+.breadcrumb a {
+  color: #5f7775 !important;
+  font-family: var(--font-mono) !important;
+  font-size: .72rem;
+}
+
+.breadcrumb a:hover {
+  color: #8bd8c1 !important;
+}
+
+.toc-border-cover {
+  background: #0b1114 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
+
 /* ── Fontes ──────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
 
