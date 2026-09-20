@@ -6,9 +6,9 @@ Ficheiro: assets/css/jekyll-theme-chirpy.scss
 
 /* ── Variáveis ───────────────────────────────────────────── */
 :root {
-  --accent:       #00ff9f;
-  --accent-dim:   #00ff9f22;
-  --accent-glow:  #00ff9f55;
+  --accent:       #8bd8c1;
+  --accent-dim:   #8bd8c122;
+  --accent-glow:  #8bd8c155;
   --bg-primary:   #0d1117;
   --bg-surface:   #161b22;
   --bg-border:    #21262d;

@@ -186,20 +186,25 @@ layout: default
    0xBerk // Field Log — tokens
    ========================================================= */
 :root {
-  --fl-bg: #0a0b0a;
-  --fl-panel: #121412;
-  --fl-border: #23261f;
-  --fl-text: #e4e7de;
-  --fl-muted: #8b8f82;
-  --fl-muted-2: #5f6459;
-  --fl-accent: #cda24c;
-  --fl-accent-dim: rgba(205, 162, 76, 0.14);
-  --fl-ok: #7c9b6e;
+  --fl-bg: #0d1215;
+  --fl-panel: #141c20;
+  --fl-border: #26363a;
+  --fl-text: #dce9e4;
+  --fl-muted: #8da49f;
+  --fl-muted-2: #5f7775;
+  --fl-accent: #8bd8c1;
+  --fl-accent-dim: rgba(139, 216, 193, 0.12);
+  --fl-ok: #a9d6a1;
   --fl-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
   --fl-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.fl { color: var(--fl-text); font-family: var(--fl-sans); }
+.fl {
+  color: var(--fl-text);
+  font-family: var(--fl-sans);
+  max-width: 980px;
+  margin: 0 auto;
+}
 .fl a { color: inherit; }
 .fl ul, .fl dl { margin: 0; padding: 0; list-style: none; }
 .fl dd { margin: 0; }
@@ -213,8 +218,8 @@ layout: default
   align-items: center;
   gap: 24px;
   padding: 14px 4px;
-  margin-bottom: 56px;
-  background: rgba(10, 11, 10, 0.86);
+  margin-bottom: 72px;
+  background: rgba(13, 18, 21, 0.9);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--fl-border);
   font-family: var(--fl-mono);
@@ -268,8 +273,20 @@ layout: default
 
 /* ---------- hero ---------- */
 .fl-hero {
-  padding: 8px 4px 48px;
-  max-width: 720px;
+  position: relative;
+  padding: 8px 4px 52px;
+  max-width: 840px;
+}
+.fl-hero::before {
+  content: '01 / profile';
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  color: var(--fl-muted-2);
+  font-family: var(--fl-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .fl-hero__eyebrow {
   margin: 0 0 14px;
@@ -284,10 +301,10 @@ layout: default
   color: var(--fl-text) !important;
   font-family: var(--fl-sans) !important;
   font-weight: 600 !important;
-  font-size: clamp(1.9rem, 4.4vw, 2.7rem) !important;
+  font-size: clamp(2.1rem, 5vw, 3.5rem) !important;
   line-height: 1.2 !important;
   border: 0 !important;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 .fl-hero__lede {
   margin: 0 0 26px;
@@ -340,7 +357,7 @@ layout: default
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
-  margin: 0 0 12px;
+  margin: 0 0 28px;
   background: var(--fl-border);
   border: 1px solid var(--fl-border);
 }
@@ -373,8 +390,18 @@ layout: default
 
 /* ---------- sections ---------- */
 .fl-section {
-  padding: 30px 4px;
+  position: relative;
+  padding: 38px 4px;
   border-top: 1px solid var(--fl-border);
+}
+.fl-section::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 42px;
+  height: 1px;
+  background: var(--fl-accent);
 }
 .fl-section--contact { padding-bottom: 44px; }
 
