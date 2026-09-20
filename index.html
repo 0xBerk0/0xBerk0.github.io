@@ -92,35 +92,9 @@ layout: default
   </div>
 </section>
 
-<section class="content-section" id="red-team">
-  <div class="content-section__heading">
-    <p class="section-kicker">04 / red team</p>
-    <h2>Tradecraft, with the edges left visible.</h2>
-  </div>
-  <div class="topic-grid">
-    <div class="topic-panel">
-      <p class="topic-panel__label">published notes</p>
-      <h3>Process injection</h3>
-      <p class="topic-panel__summary">A focused set of notes on CreateRemoteThread and different payload placement approaches.</p>
-      <div class="topic-panel__links">
-        {% for post in site.posts %}
-          {% if post.title contains 'Process Injection' %}
-            <a href="{{ post.url | relative_url }}">{{ post.title }} <span>→</span></a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    <div class="topic-panel topic-panel--quiet">
-      <p class="topic-panel__label">next lane</p>
-      <h3>AV / EDR bypass</h3>
-      <p class="topic-panel__summary">No dedicated writeup published yet. This space is reserved for future research and notes.</p>
-    </div>
-  </div>
-</section>
-
 <section class="content-section" id="notes">
   <div class="content-section__heading">
-    <p class="section-kicker">05 / latest notes</p>
+    <p class="section-kicker">04 / latest notes</p>
     <h2>Recent work from the field.</h2>
   </div>
   <div class="notes-preview">
@@ -140,7 +114,7 @@ layout: default
 
 <section class="content-section contact-section" id="contact">
   <div>
-    <p class="section-kicker">06 / contact</p>
+    <p class="section-kicker">05 / contact</p>
     <p>Research, red team engagements, or just talking through a chain that isn't clicking — reach out.</p>
   </div>
   <a class="button" href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener">connect on LinkedIn</a>

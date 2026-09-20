@@ -43,6 +43,7 @@ layout: default
     const filters = [...document.querySelectorAll('.filter-button')];
     const count = document.getElementById('archive-count');
     const empty = document.getElementById('archive-empty');
+    const initialQuery = new URLSearchParams(window.location.search).get('q') || '';
     let activeFilter = 'all';
 
     const update = () => {
@@ -66,5 +67,8 @@ layout: default
       activeFilter = filter.dataset.filter;
       update();
     }));
+
+    input.value = initialQuery;
+    update();
   })();
 </script>

@@ -18,10 +18,11 @@
     {% endfor %}
 
     <span class="site-nav__label site-nav__label--group">practice areas</span>
-    <a href="{{ '/' | relative_url }}#red-team">red team</a>
-    <a href="{{ '/' | relative_url }}#active-directory">active directory</a>
-    <a href="{{ '/' | relative_url }}#web-security">web security</a>
-    <a href="{{ '/' | relative_url }}#labs">labs</a>
+    <details class="site-nav__dropdown">
+      <summary>red team</summary>
+      <a href="{{ '/archives/?q=process%20injection' | relative_url }}">process injection</a>
+      <a href="{{ '/archives/?q=av%20edr' | relative_url }}">AV / EDR bypass</a>
+    </details>
   </nav>
 
   <div class="site-rail__footer" aria-label="Social links">
