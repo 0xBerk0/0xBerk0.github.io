@@ -1,0 +1,93 @@
+# ~/arsenal — public research & tooling
+# Each group renders as a section on /arsenal/ and the featured
+# entries (featured: true) show up on the homepage.
+
+- id: evasion
+  title: "evasion"
+  path: "~/arsenal/evasion"
+  blurb: "Seeing what the EDR sees — and talking to the kernel without asking ntdll politely."
+  repos:
+    - name: windows-api-hook-finder
+      lang: C
+      featured: true
+      desc: "Walks a loaded module's exports and flags functions whose first byte is a near JMP (0xE9) — a quick look at userland inline hooks."
+      tags: [hooks, ntdll, edr]
+    - name: HalosGate-research
+      lang: C
+      featured: true
+      desc: "Dynamic SSN resolution PoC. When a stub is hooked, walk neighbouring syscalls up and down to recover the service number."
+      tags: [syscalls, ssn, halos-gate]
+    - name: indirect-syscalls
+      lang: C / ASM
+      featured: true
+      desc: "x64 MASM wrappers for NtAllocateVirtualMemory, NtWriteVirtualMemory and NtCreateThreadEx that jump into ntdll's own syscall instruction."
+      tags: [syscalls, masm, x64]
+    - name: dynamic-imports-with-hashing
+      lang: C
+      featured: true
+      desc: "Resolves VirtualAlloc with no GetModuleHandle / GetProcAddress: PEB walk, export parsing and hashed name comparison."
+      tags: [api-hashing, peb, iat]
+
+- id: injection
+  title: "injection"
+  path: "~/arsenal/injection"
+  blurb: "Classic to early-bird. Getting code into memory and a thread pointed at it."
+  repos:
+    - name: classic-process-injection
+      lang: C++
+      desc: "The baseline: VirtualAlloc a buffer, WriteProcessMemory the payload in, CreateThread on it. Everything else starts here."
+      tags: [shellcode, local-thread]
+    - name: process-injection-early-bird
+      lang: C
+      featured: true
+      desc: "Early Bird APC: spawn suspended, allocate + write, QueueUserAPC on the primary thread, resume."
+      tags: [apc, suspended]
+    - name: process-injection-process-hollowing
+      lang: C++
+      desc: "Process hollowing: suspended host, PE header parsing, thread context rewrite to a new entry point."
+      tags: [hollowing, pe, context]
+    - name: process-injection-using-resources
+      lang: C
+      desc: "Donut-generated shellcode embedded as a PE resource, pulled with FindResource / LockResource and run from memory."
+      tags: [resources, donut, staging]
+
+- id: internals
+  title: "pe & windows internals"
+  path: "~/arsenal/internals"
+  blurb: "The boring structures every implant quietly depends on."
+  repos:
+    - name: pe-parser
+      lang: C
+      featured: true
+      desc: "Manual PE parser — DOS/NT headers, optional header, sections, entry point location and import table, no libraries."
+      tags: [pe, imports, sections]
+    - name: peb-walker
+      lang: C
+      desc: "Reads the PEB from GS/FS and walks InLoadOrderModuleList to list loaded modules and their base addresses."
+      tags: [peb, ldr]
+    - name: export-address-table-walker
+      lang: C
+      desc: "Maps kernel32.dll from disk, validates it and walks the EAT — names, ordinals and RVAs."
+      tags: [eat, exports]
+
+- id: side-quests
+  title: "side quests"
+  path: "~/arsenal/side-quests"
+  blurb: "Nerd stuff that isn't strictly offensive."
+  repos:
+    - name: ratatui-simple-cli
+      lang: Rust
+      desc: "Terminal UI playground built on Ratatui."
+      tags: [tui, rust]
+    - name: ml-from-scratch
+      lang: Rust
+      desc: "Machine learning algorithms from scratch in Rust, starting with a perceptron."
+      tags: [ml, rust]
+    - name: hack-the-box
+      lang: PDF
+      desc: "Report-style PDF writeups for HackTheBox machines."
+      tags: [reports, htb]
+    - name: tryhackme-writeups
+      lang: PDF
+      desc: "Early TryHackMe CTF reports — where it started."
+      tags: [reports, thm]

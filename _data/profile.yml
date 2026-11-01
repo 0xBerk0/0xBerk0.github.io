@@ -1,0 +1,61 @@
+# Single source of truth for the profile bits reused across pages.
+
+handle: 0xBerk
+banner: 0xBERK
+name: António Rodrigues
+role: "Red Team Operator // Offensive Developer // PT"
+bio: >-
+  Red team operator from Portugal. I break Active Directory environments
+  and write my own tooling in C/C++ to do it without getting caught.
+motto: "struggle. adapt. understand."
+
+linkedin: "https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/"
+cv: /assets/files/cv_antonio_rodrigues.pdf
+
+focus:
+  - Active Directory
+  - Windows internals
+  - EDR evasion tooling
+
+certs:
+  - code: CPTS
+    name: Certified Penetration Testing Specialist
+    issuer: Hack The Box
+    progress: 100
+  - code: CRTO
+    name: Certified Red Team Operator
+    issuer: Zero-Point Security
+    progress: 100
+  - code: ODPC
+    name: Offensive Development Practitioner Certification
+    issuer: in progress
+    progress: 40
+  - code: ARTOC
+    name: Advanced Red Team Operator Track
+    issuer: in progress
+    progress: 20
+
+stats:
+  - label: machines
+    value: "100+"
+  - label: pro labs
+    value: "2"
+  - label: certs
+    value: "2/4"
+
+loadout:
+  - key: AD
+    label: active directory
+    items: [Kerberoasting, AS-REP, RBCD, AD CS, ACL abuse, Shadow Credentials, DCSync, Cobalt Strike]
+    link: /writeups/
+    link_label: write-ups
+  - key: DEV
+    label: offensive dev
+    items: [process injection, indirect syscalls, "Halo's Gate", API hashing, hook detection, PE parsing]
+    link: /arsenal/
+    link_label: arsenal
+  - key: OPS
+    label: operations
+    items: [Dante, P.O.O., internal pivoting, C2 tradecraft, OPSEC]
+    link: /whoami/
+    link_label: whoami
