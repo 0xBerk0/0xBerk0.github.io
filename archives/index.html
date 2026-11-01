@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /archives/
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Moved · {{ site.title }}</title>
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ '/writeups/' | absolute_url }}">
+    <meta http-equiv="refresh" content="0; url={{ '/writeups/' | relative_url }}">
+    <script>location.replace('{{ "/writeups/" | relative_url }}' + location.search);</script>
+  </head>
+  <body><p>Moved to <a href="{{ '/writeups/' | relative_url }}">/writeups/</a>.</p></body>
+</html>
