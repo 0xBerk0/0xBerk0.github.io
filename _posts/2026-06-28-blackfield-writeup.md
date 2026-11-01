@@ -2,8 +2,12 @@
 layout: post
 title: "HackTheBox — Blackfield"
 date: 2026-06-28
-difficulty: Hard
-os: Windows
+categories: [HTB, Active Directory]
+tags: [as-rep, forcechangepassword, lsass, sebackupprivilege, ntds]
+description: "AS-REP roast → ForceChangePassword → LSASS dump from a forensic share → SeBackupPrivilege → ntds.dit."
+platform: "HackTheBox"
+os: "Windows"
+difficulty: "Hard"
 ---
 
 # HackTheBox — Blackfield

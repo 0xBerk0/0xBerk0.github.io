@@ -1,6 +1,11 @@
 ---
-title: Welcome to Root4Win
+layout: post
+title: "Welcome to Root4Win"
 date: 2026-03-15 20:00:00 +0000
+categories: [Log]
+tags: [meta]
+description: "First transmission — why this log exists and what it will cover."
+platform: "notes"
 ---
 
 # Welcome to Root4Win

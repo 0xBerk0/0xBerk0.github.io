@@ -1,6 +1,13 @@
 ---
-title: "HTB Forest Writeup"
+layout: post
+title: "HackTheBox — Forest"
 date: 2026-06-23
+categories: [HTB, Active Directory]
+tags: [as-rep, writedacl, dcsync, pass-the-hash, bloodhound]
+description: "Anonymous RPC user dump → AS-REP roast svc-alfresco → Exchange Windows Permissions WriteDACL → DCSync."
+platform: "HackTheBox"
+os: "Windows"
+difficulty: "Easy"
 ---
 
 ## Summary

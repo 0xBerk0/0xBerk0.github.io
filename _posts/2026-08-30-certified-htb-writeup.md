@@ -1,3 +1,14 @@
+---
+layout: post
+title: "HackTheBox — Certified"
+date: 2026-08-30
+categories: [HTB, Active Directory]
+tags: [acl-abuse, shadow-credentials, adcs, esc9, certipy]
+description: "WriteOwner → GenericWrite → Shadow Credentials → AD CS ESC9 UPN swap to Administrator."
+platform: "HackTheBox"
+os: "Windows"
+difficulty: "Medium"
+---
 
 # HackTheBox — Certified
 

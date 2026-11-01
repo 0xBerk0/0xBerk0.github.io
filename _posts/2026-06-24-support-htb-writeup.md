@@ -1,6 +1,13 @@
 ---
-title: "HTB Support Writeup"
+layout: post
+title: "HackTheBox — Support"
 date: 2026-06-26
+categories: [HTB, Active Directory]
+tags: [reversing, dotnet, ldap, rbcd, s4u]
+description: "Reverse a .NET binary for LDAP creds, loot a password from user attributes, then RBCD + S4U to Domain Admin."
+platform: "HackTheBox"
+os: "Windows"
+difficulty: "Easy"
 ---
 
 ## Summary

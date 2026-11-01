@@ -2,8 +2,12 @@
 layout: post
 title: "HackTheBox — Monteverde"
 date: 2026-08-29
-difficulty: Medium
-os: Windows
+categories: [HTB, Active Directory]
+tags: [password-spray, ldap, azure-ad-connect, adsync]
+description: "Username-as-password spray, creds in azure.xml, then decrypting the Azure AD Connect sync account."
+platform: "HackTheBox"
+os: "Windows"
+difficulty: "Medium"
 ---
 
 # HackTheBox — Monteverde

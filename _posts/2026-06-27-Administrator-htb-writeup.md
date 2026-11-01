@@ -2,8 +2,12 @@
 layout: post
 title: "HackTheBox — Administrator"
 date: 2026-06-27
-difficulty: Medium
-os: Windows
+categories: [HTB, Active Directory]
+tags: [acl-abuse, targeted-kerberoast, password-safe, dcsync]
+description: "GenericAll → ForceChangePassword → Password Safe loot → targeted Kerberoast → DCSync. A pure ACL chain."
+platform: "HackTheBox"
+os: "Windows"
+difficulty: "Medium"
 ---
 
 # HackTheBox — Administrator

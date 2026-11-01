@@ -1,6 +1,11 @@
 ---
+layout: post
 title: "AD Enumeration Cheat Sheet"
 date: 2026-06-17
+categories: [Cheatsheet, Active Directory]
+tags: [recon, ldap, smb, kerberos, bloodhound]
+description: "Unauthenticated-first AD enumeration reference: passive recon, SMB/LDAP null sessions, user hunting and the first Kerberos checks."
+platform: "notes"
 ---
 
 # Active Directory Enumeration Cheat Sheet (No Credentials)
