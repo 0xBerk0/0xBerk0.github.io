@@ -2,12 +2,13 @@
 layout: default
 ---
 
-<article class="article">
-  <header class="article-header">
-    <p class="eyebrow">{{ page.title | downcase }}</p>
-    <h1>{{ page.title }}</h1>
-  </header>
-  <div class="article-body">
+<section class="page-head wrap">
+  <p class="crumb"><a href="{{ '/' | relative_url }}">~</a>/{{ page.title | downcase | slugify }}</p>
+  <h1 class="page-head__title glitch" data-text="{{ page.title | upcase }}">{{ page.title | upcase }}</h1>
+</section>
+
+<article class="wrap">
+  <div class="prose prose--narrow">
     {{ content }}
   </div>
 </article>

@@ -3,22 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description | strip_newlines | escape }}">
-    <title>{% if page.title and page.url != '/' %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    {% capture page_title %}{% if page.title and page.url != '/' %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · {{ site.tagline }}{% endif %}{% endcapture %}
+    {% capture page_desc %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+    <title>{{ page_title | strip }}</title>
+    <meta name="description" content="{{ page_desc | strip_newlines | strip | escape }}">
+    <meta name="theme-color" content="#07060b">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:title" content="{{ page_title | strip | escape }}">
+    <meta property="og:description" content="{{ page_desc | strip_newlines | strip | escape }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    <meta property="og:image" content="{{ site.avatar | absolute_url }}">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%2307060b'/%3E%3Ctext x='4' y='22' font-family='monospace' font-weight='700' font-size='16' fill='%232de2e6'%3E%3E_%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   </head>
-  <body class="page-{{ page.layout | default: 'default' }}">
-    <div class="site-shell">
-      {% include site-sidebar.html %}
-      <main class="site-main" id="main-content">
-        <div class="site-main__inner">
-          {{ content }}
-        </div>
-      </main>
-    </div>
+  <body class="layout-{{ page.layout | default: 'default' }}">
+    <a class="skip-link" href="#main">skip to content</a>
+    <div class="fx-scanlines" aria-hidden="true"></div>
+    {% include topbar.html %}
+    <main class="main" id="main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    <script>
+      // close the mobile menu after navigating
+      document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+        const t = document.getElementById('nav-toggle'); if (t) t.checked = false;
+      }));
+    </script>
   </body>
 </html>

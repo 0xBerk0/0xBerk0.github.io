@@ -1,0 +1,101 @@
+---
+layout: default
+---
+{% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+{% assign tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+
+<section class="page-head wrap">
+  <p class="crumb"><a href="{{ '/' | relative_url }}">~</a>/writeups</p>
+  <h1 class="page-head__title glitch" data-text="OPS.LOG">OPS.LOG</h1>
+  <p class="page-head__lede">
+    Machines, attack chains and field notes. Every entry is a box I got stuck on long enough to
+    understand — written up so the <em>why</em> survives longer than the flag.
+  </p>
+</section>
+
+<section class="wrap">
+  <div class="console">
+    <div class="console__bar"><span></span><span></span><span></span><em>grep -ri</em></div>
+    <div class="console__body">
+      <label class="search">
+        <span class="search__ps">$ grep -i</span>
+        <input id="q" type="search" placeholder="kerberoast, esc9, blackfield…" autocomplete="off" spellcheck="false" aria-label="Search writeups">
+      </label>
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button class="chip is-active" type="button" data-cat="all">all</button>
+        {% for c in categories %}{% if c != '' %}<button class="chip" type="button" data-cat="{{ c | downcase }}">{{ c | downcase }}</button>{% endif %}{% endfor %}
+      </div>
+      <div class="filters filters--tags" role="group" aria-label="Filter by technique">
+        {% for t in tags %}{% if t != '' %}<button class="tag tag--btn" type="button" data-tag="{{ t | downcase }}">#{{ t | downcase }}</button>{% endif %}{% endfor %}
+      </div>
+      <p class="console__status"><span id="count">{{ site.posts | size }}</span>/{{ site.posts | size }} entries match <span class="cursor">_</span></p>
+    </div>
+  </div>
+
+  {% assign by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in by_year %}
+  <div class="year" data-year>
+    <h2 class="year__label">// {{ year.name }}</h2>
+    <ol class="oplog oplog--full">
+      {% for post in year.items %}
+      <li class="entry"
+          data-search="{{ post.title | downcase }} {{ post.description | downcase }} {{ post.tags | join: ' ' | downcase }} {{ post.categories | join: ' ' | downcase }}"
+          data-cats="|{{ post.categories | join: '|' | downcase }}|"
+          data-tags="|{{ post.tags | join: '|' | downcase }}|">
+        <a class="oplog__row" href="{{ post.url | relative_url }}">
+          <span class="oplog__ts">[{{ post.date | date: "%m-%d" }}]</span>
+          <span class="oplog__src">{% if post.platform %}{{ post.platform | downcase }}{% else %}log{% endif %}</span>
+          <span class="oplog__main">
+            <span class="oplog__title">{{ post.title }}</span>
+            {% if post.description %}<span class="oplog__desc">{{ post.description }}</span>{% endif %}
+            {% if post.tags %}<span class="tags">{% for t in post.tags limit:5 %}<span class="tag">#{{ t }}</span>{% endfor %}</span>{% endif %}
+          </span>
+          <span class="oplog__meta">
+            {% if post.difficulty %}<span class="diff diff--{{ post.difficulty | downcase }}">{{ post.difficulty | downcase }}</span>{% endif %}
+            {% if post.os %}<span class="c-dim">{{ post.os | downcase }}</span>{% endif %}
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endfor %}
+  <p class="empty" id="empty" hidden>grep: no matches. try a broader term.</p>
+</section>
+
+<script>
+(() => {
+  const q = document.getElementById('q');
+  const entries = [...document.querySelectorAll('.entry')];
+  const years = [...document.querySelectorAll('[data-year]')];
+  const cats = [...document.querySelectorAll('[data-cat]')];
+  const tags = [...document.querySelectorAll('[data-tag]')];
+  const count = document.getElementById('count');
+  const empty = document.getElementById('empty');
+  const params = new URLSearchParams(location.search);
+  let cat = 'all';
+  let tag = (params.get('tag') || '').toLowerCase();
+  q.value = params.get('q') || '';
+
+  const render = () => {
+    const term = q.value.trim().toLowerCase();
+    let n = 0;
+    entries.forEach(e => {
+      const ok = (!term || e.dataset.search.includes(term))
+        && (cat === 'all' || e.dataset.cats.includes('|' + cat + '|'))
+        && (!tag || e.dataset.tags.includes('|' + tag + '|'));
+      e.hidden = !ok; if (ok) n++;
+    });
+    years.forEach(y => { y.hidden = !y.querySelector('.entry:not([hidden])'); });
+    cats.forEach(b => b.classList.toggle('is-active', b.dataset.cat === cat));
+    tags.forEach(b => b.classList.toggle('is-active', b.dataset.tag === tag));
+    count.textContent = n;
+    empty.hidden = n !== 0;
+  };
+
+  q.addEventListener('input', render);
+  cats.forEach(b => b.addEventListener('click', () => { cat = b.dataset.cat; render(); }));
+  tags.forEach(b => b.addEventListener('click', () => { tag = tag === b.dataset.tag ? '' : b.dataset.tag; render(); }));
+  render();
+})();
+</script>

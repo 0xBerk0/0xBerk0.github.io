@@ -1,0 +1,59 @@
+---
+layout: default
+---
+{% assign total = 0 %}{% for g in site.data.arsenal %}{% assign total = total | plus: g.repos.size %}{% endfor %}
+
+<section class="page-head wrap">
+  <p class="crumb"><a href="{{ '/' | relative_url }}">~</a>/arsenal</p>
+  <h1 class="page-head__title glitch" data-text="ARSENAL">ARSENAL</h1>
+  <p class="page-head__lede">
+    Public research and tooling, written in C/C++ to understand what's actually happening under the
+    Win32 API. Small, single-purpose PoCs — each one exists because a writeup or a course module
+    left me wanting to see the mechanism with my own eyes.
+  </p>
+  <p class="page-head__meta">
+    <span><b>{{ total }}</b> repos</span>
+    <span><b>{{ site.data.arsenal | size }}</b> modules</span>
+    <span>lang: <b>C · C++ · ASM · Rust</b></span>
+  </p>
+</section>
+
+<nav class="wrap jump" aria-label="Arsenal sections">
+  {% for g in site.data.arsenal %}<a href="#{{ g.id }}">{{ g.path }}</a>{% endfor %}
+</nav>
+
+{% for g in site.data.arsenal %}
+<section class="block wrap" id="{{ g.id }}">
+  <div class="block__head">
+    <h2 class="cmd"><span class="cmd__ps">0xberk@redteam:~$</span> tree {{ g.path }}</h2>
+    <span class="more c-dim">{{ g.repos | size }} items</span>
+  </div>
+  <p class="block__blurb">{{ g.blurb }}</p>
+  <div class="repo-grid">
+    {% for r in g.repos %}
+    <a class="repo" href="https://github.com/{{ site.github.username }}/{{ r.name }}" target="_blank" rel="noopener">
+      <span class="repo__top">
+        <span class="repo__perm">{% if forloop.last %}└──{% else %}├──{% endif %}</span>
+        <span class="repo__group">{{ g.title }}</span>
+        <span class="repo__lang">{{ r.lang }}</span>
+      </span>
+      <span class="repo__name">{{ r.name }}</span>
+      <span class="repo__desc">{{ r.desc }}</span>
+      <span class="tags">{% for t in r.tags %}<span class="tag">#{{ t }}</span>{% endfor %}</span>
+      <span class="repo__cta">git clone →</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="block wrap">
+  <div class="notice">
+    <p class="prompt">&gt; scope</p>
+    <p>
+      Everything here is research-grade proof-of-concept code for isolated labs and authorized
+      engagements. Some repos intentionally omit pieces that would make them drop-in weaponizable.
+      Read them, build them in a VM, break them, learn from them.
+    </p>
+  </div>
+</section>

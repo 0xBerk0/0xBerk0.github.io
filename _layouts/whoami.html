@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{% assign p = site.data.profile %}
+
+<section class="page-head wrap">
+  <p class="crumb"><a href="{{ '/' | relative_url }}">~</a>/whoami</p>
+  <h1 class="page-head__title glitch" data-text="WHOAMI">WHOAMI</h1>
+</section>
+
+<section class="wrap profile">
+  <div class="profile__card">
+    <img src="{{ site.avatar | relative_url }}" width="180" height="180" alt="{{ p.handle }} avatar">
+    <pre class="profile__id">handle  : <b>{{ p.handle }}</b>
+name    : {{ p.name }}
+role    : red team / offdev
+loc     : Portugal (UTC+0)
+status  : <span class="c-cyan">online</span></pre>
+    <div class="actions actions--stack">
+      <a class="btn btn--cyan" href="{{ p.linkedin }}" target="_blank" rel="noopener">linkedin</a>
+      <a class="btn" href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener">github</a>
+      <a class="btn btn--pink" href="{{ p.cv | relative_url }}">download cv.pdf</a>
+    </div>
+  </div>
+
+  <div class="profile__body prose">
+    <p class="lead">{{ p.bio }}</p>
+    <p>
+      I'm António. Most of what I know came from getting stuck for hours on a machine, refusing to
+      open the walkthrough, and eventually understanding <em>why</em> the exploit worked. That habit
+      is still the whole method: break it, document it, rebuild it from first principles.
+    </p>
+    <p>
+      On the <b>operator</b> side I live in Active Directory — Kerberos abuse, ACL chains, AD CS,
+      delegation, and getting from a foothold to Domain Admin without making noise. On the
+      <b>developer</b> side I write small C/C++ tools to understand what EDRs actually look at:
+      process injection variants, direct and indirect syscalls, Halo's Gate, PEB walking and API hashing.
+    </p>
+
+    <h2 class="cmd"><span class="cmd__ps">$</span> cat certs.log</h2>
+    <div class="cert-table">
+      {% for c in p.certs %}
+      <div class="cert{% if c.progress == 100 %} cert--done{% endif %}">
+        <span class="cert__code">{{ c.code }}</span>
+        <span class="cert__name">{{ c.name }}<small>{{ c.issuer }}</small></span>
+        <span class="bar__track"><span style="width: {{ c.progress }}%"></span></span>
+        <span class="cert__state">{% if c.progress == 100 %}cleared{% else %}{{ c.progress }}%{% endif %}</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2 class="cmd"><span class="cmd__ps">$</span> cat loadout.txt</h2>
+    <div class="loadout">
+      {% for row in p.loadout %}
+      <div class="loadout__row">
+        <span class="loadout__key">{{ row.key }}</span>
+        <span class="loadout__items">{% for item in row.items %}<span>{{ item }}</span>{% endfor %}</span>
+        <a class="loadout__link" href="{{ row.link | relative_url }}">{{ row.link_label }} →</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2 class="cmd"><span class="cmd__ps">$</span> history | tail</h2>
+    <ol class="timeline">
+      <li><span>now</span><p>ODPC &amp; ARTOC in progress — offensive development and advanced red team ops.</p></li>
+      <li><span>2026</span><p>Publishing AD writeups (Forest → Certified) and C tooling on GitHub.</p></li>
+      <li><span>CRTO</span><p>Cobalt Strike tradecraft, lateral movement, domain dominance.</p></li>
+      <li><span>CPTS</span><p>Full-scope pentest methodology, end to end.</p></li>
+      <li><span>labs</span><p>100+ HTB machines · Pro Labs Dante and P.O.O.</p></li>
+      <li><span>t0</span><p>TryHackMe rooms and PDF reports. Getting stuck. A lot.</p></li>
+    </ol>
+
+    <h2 class="cmd"><span class="cmd__ps">$</span> ping 0xberk</h2>
+    <p>
+      Research, red team engagements, or just talking through an attack chain that isn't clicking —
+      reach out on <a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>.
+    </p>
+  </div>
+</section>
