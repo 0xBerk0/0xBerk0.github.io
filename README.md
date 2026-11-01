@@ -1,39 +1,58 @@
-# Chirpy Starter
+# 0xBerk0.github.io
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
-
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
-
-## Why This Starter Exists
-
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
-
-To unlock all features, the following files must be present in your Jekyll site:
-
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```
+ 0xBERK  //  RED TEAM OPERATOR // OFFENSIVE DEVELOPER // PT
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+Source for **[0xberk0.github.io](https://0xberk0.github.io)**: writeups, offensive tooling and
+Windows internals research. Jekyll + a custom synthwave / CRT theme that matches the GitHub profile banner.
 
-## Usage
+## layout
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+```
+.
+├── index.html                 # home: banner, loadout, featured arsenal, ops.log, whoami
+├── arsenal.md                 # /arsenal/  → _layouts/arsenal.html
+├── writeups.md                # /writeups/ → _layouts/writeups.html (search + filters)
+├── whoami.md                  # /whoami/   → _layouts/whoami.html
+├── archives/index.html        # old /archives/ URL → redirects to /writeups/
+├── _data/
+│   ├── profile.yml            # handle, bio, focus, certs + progress, loadout, stats
+│   └── arsenal.yml            # tooling repos, grouped (featured: true → homepage)
+├── _layouts/                  # default, post, page, writeups, arsenal, whoami
+├── _includes/                 # topbar, footer
+├── _posts/                    # writeups (markdown)
+└── assets/css/site.css        # the whole theme
+```
 
-## Contributing
+## adding a writeup
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+```yaml
+---
+layout: post
+title: "HackTheBox — Machine"
+date: 2026-09-01
+categories: [HTB, Active Directory]
+tags: [kerberoast, dcsync]
+description: "One-line attack chain: foothold → privesc → DA."
+platform: "HackTheBox"
+os: "Windows"
+difficulty: "Medium"      # easy | medium | hard | insane
+---
+```
 
-## License
+## updating the profile
 
-This work is published under [MIT][mit] License.
+- certification progress → `_data/profile.yml` → `certs[].progress` (100 = cleared)
+- new tool → `_data/arsenal.yml` (set `featured: true` to show it on the homepage)
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+## local
+
+```sh
+bundle install
+bundle exec jekyll serve
+```
+
+---
+
+Everything here is for education and authorized testing only. struggle. adapt. understand.

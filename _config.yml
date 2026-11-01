@@ -2,10 +2,10 @@ theme: jekyll-theme-chirpy
 lang: en
 timezone: Europe/Lisbon
 title: 0xBerk
-tagline: "Offensive Security // Red Team // Active Directory"
+tagline: "Red Team Operator // Offensive Developer"
 description: >-
-  Writeups, red team research and offensive development notes by 0xBerk.
-  CPTS & CRTO certified — breaking things to understand them.
+  0xBerk — red team operator and offensive developer from Portugal.
+  Active Directory attack chains, Windows internals and C/C++ evasion tooling.
 url: "https://0xBerk0.github.io"
 baseurl: ""
 
@@ -80,6 +80,7 @@ exclude:
   - docs
   - tools
   - README.md
+  - vendor
   - LICENSE
   - purgecss.js
   - "*.config.js"

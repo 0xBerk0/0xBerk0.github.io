@@ -1,135 +1,143 @@
 ---
 layout: default
 ---
+{% assign p = site.data.profile %}
 
-<header class="home-hero">
-  <div>
-    <p class="eyebrow">offensive security researcher · penetration tester</p>
-    <h1>Attack paths,<br><span>documented clearly.</span></h1>
-    <p class="home-hero__lede">
-      I help teams understand how their environments fail. My work focuses on Active Directory,
-      red team operations and internal network compromise, with a practical bias toward clear
-      findings, repeatable tradecraft and continuous learning.
-    </p>
-    <div class="home-hero__actions">
-      <a class="button" href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener">connect on LinkedIn</a>
-      <a class="text-link" href="{{ '/archives/' | relative_url }}">browse the writeups</a>
+<!-- ░░ HERO — mirrors the GitHub README banner ░░ -->
+<section class="hero wrap">
+  <div class="hero__frame">
+    <div class="hero__sky" aria-hidden="true"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <p class="hero__boot"><span class="c-dim">[</span> session established <span class="c-dim">·</span> tty0 <span class="c-dim">]</span></p>
+    <h1 class="hero__title glitch" data-text="{{ p.banner }}">{{ p.banner }}</h1>
+    <p class="hero__role">{{ p.role | upcase }}</p>
+
+    <div class="hero__cols">
+      <div class="hero__focus">
+        <p class="prompt">&gt; focus</p>
+        <ul>
+          {% for f in p.focus %}<li>{{ f }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="hero__certs">
+        <p class="prompt">&gt; certs</p>
+        {% for c in p.certs %}
+        <div class="bar{% if c.progress == 100 %} bar--done{% endif %}">
+          <span class="bar__code">{{ c.code }}</span>
+          <span class="bar__track"><span style="width: {{ c.progress }}%"></span></span>
+          <span class="bar__state">{% if c.progress == 100 %}cleared{% else %}loading {{ c.progress }}%{% endif %}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="hero__foot">
+      <span>uplink: {{ site.url | remove: 'https://' | downcase }}</span>
+      <span class="c-cyan">status: online<span class="cursor">_</span></span>
     </div>
   </div>
 
-  <div class="home-hero__aside" aria-label="Profile signals">
-    <div class="signal-line"><span>handle</span><strong>0xBerk</strong></div>
-    <div class="signal-line"><span>location</span><strong>Portugal</strong></div>
-    <div class="signal-line"><span>machines</span><strong>100+</strong></div>
-    <div class="signal-line"><span>pro labs</span><strong>2</strong></div>
-    <div class="signal-line"><span>published</span><strong>{{ site.posts | size }} notes</strong></div>
-  </div>
-</header>
-
-<section class="content-section" id="about">
-  <div class="content-section__heading">
-    <p class="section-kicker">01 / about</p>
-    <h2>Technical work, documented clearly.</h2>
-  </div>
-  <div class="about-copy">
-    <p>
-      I'm António — under the handle <strong>0xBerk</strong> — an offensive security researcher
-      based in Portugal, focused on Active Directory attack paths, Kerberos abuse and internal
-      network compromise. Most of what I know came from getting stuck for hours on a box,
-      refusing to look at the walkthrough, and eventually understanding why the exploit worked.
-    </p>
-    <p>
-      This page is a concise overview of my technical focus, certifications and practical work.
-      The full writeup archive is available separately for anyone who wants to go deeper into
-      the methodology and lessons behind each engagement.
-    </p>
-  </div>
-</section>
-
-<section class="content-section" id="certifications">
-  <div class="content-section__heading">
-    <p class="section-kicker">02 / credentials</p>
-    <h2>Hands-on certifications in motion.</h2>
-  </div>
-  <div class="cert-list">
-    <div class="cert-item">
-      <span class="cert-item__code">CPTS</span>
-      <span class="cert-item__name">Certified Penetration Testing Specialist</span>
-      <span class="cert-item__state cert-item__state--done">verified</span>
-      <div class="cert-bar"><span style="width:100%"></span></div>
-    </div>
-    <div class="cert-item">
-      <span class="cert-item__code">CRTO</span>
-      <span class="cert-item__name">Certified Red Team Operator</span>
-      <span class="cert-item__state cert-item__state--done">verified</span>
-      <div class="cert-bar"><span style="width:100%"></span></div>
-    </div>
-    <div class="cert-item">
-      <span class="cert-item__code">ODPC</span>
-      <span class="cert-item__name">Offensive Development Practitioner Certification</span>
-      <span class="cert-item__state">in progress · 40%</span>
-      <div class="cert-bar"><span style="width:40%"></span></div>
-    </div>
-    <div class="cert-item">
-      <span class="cert-item__code">ARTOC</span>
-      <span class="cert-item__name">Advanced Red Team Operator Track</span>
-      <span class="cert-item__state">in progress · 20%</span>
-      <div class="cert-bar"><span style="width:20%"></span></div>
+  <div class="hero__after">
+    <p class="hero__bio">{{ p.bio }}</p>
+    <div class="actions">
+      <a class="btn btn--cyan" href="{{ '/arsenal/' | relative_url }}">./arsenal</a>
+      <a class="btn btn--pink" href="{{ '/writeups/' | relative_url }}">./writeups</a>
+      <a class="btn" href="{{ p.cv | relative_url }}">cv.pdf</a>
     </div>
   </div>
 </section>
 
-<section class="content-section" id="capabilities">
-  <div class="content-section__heading">
-    <p class="section-kicker">03 / capabilities</p>
-    <h2>Where the work gets interesting.</h2>
-  </div>
-  <div class="capability-grid">
-    <div class="capability" id="labs"><h3 class="capability__title">Hack The Box</h3><p>100+ retired &amp; active machines compromised across Windows and Linux.</p></div>
-    <div class="capability"><h3 class="capability__title">Pro Labs</h3><p>Dante, P.O.O. — multi-host chains against realistic corporate networks.</p></div>
-    <div class="capability" id="web-security"><h3 class="capability__title">Web</h3><p>Auth flaws, injection, API abuse — mostly as an entry point into internal infra.</p></div>
-    <div class="capability" id="active-directory"><h3 class="capability__title">Active Directory</h3><p>Kerberos abuse, ADCS misconfigurations, resource-based constrained delegation.</p></div>
-  </div>
-</section>
-
-<section class="content-section" id="notes">
-  <div class="content-section__heading">
-    <p class="section-kicker">04 / latest notes</p>
-    <h2>Recent work from the field.</h2>
-  </div>
-  <div class="notes-preview">
-    {% for post in site.posts limit:5 %}
-      <a class="note-card" href="{{ post.url | relative_url }}">
-        <span class="note-card__meta">{{ post.date | date: "%Y.%m.%d" }}</span>
-        <span>
-          <span class="note-card__title">{{ post.title }}</span>
-          {% if post.description %}<span class="note-card__excerpt">{{ post.description }}</span>{% elsif post.excerpt %}<span class="note-card__excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</span>{% endif %}
-        </span>
-        <span class="note-card__arrow" aria-hidden="true">→</span>
-      </a>
+<!-- ░░ LOADOUT ░░ -->
+<section class="block wrap" id="loadout">
+  <h2 class="cmd"><span class="cmd__ps">0xberk@redteam:~$</span> cat loadout.txt</h2>
+  <div class="loadout">
+    {% for row in p.loadout %}
+    <div class="loadout__row">
+      <span class="loadout__key">{{ row.key }}</span>
+      <span class="loadout__items">
+        {% for item in row.items %}<span>{{ item }}</span>{% endfor %}
+      </span>
+      <a class="loadout__link" href="{{ row.link | relative_url }}">{{ row.link_label }} →</a>
+    </div>
     {% endfor %}
   </div>
-  <a class="text-link" href="{{ '/archives/' | relative_url }}">view all {{ site.posts | size }} writeups</a>
 </section>
 
-<section class="content-section contact-section" id="contact">
-  <div>
-    <p class="section-kicker">05 / contact</p>
-    <p>Research, red team engagements, or just talking through a chain that isn't clicking — reach out.</p>
+<!-- ░░ ARSENAL (featured) ░░ -->
+<section class="block wrap" id="arsenal">
+  <div class="block__head">
+    <h2 class="cmd"><span class="cmd__ps">0xberk@redteam:~$</span> ls -la ~/arsenal --featured</h2>
+    <a class="more" href="{{ '/arsenal/' | relative_url }}">full arsenal →</a>
   </div>
-  <a class="button" href="https://www.linkedin.com/in/ant%C3%B3nio-rodrigues-55996b2ab/" target="_blank" rel="noopener">connect on LinkedIn</a>
+  <div class="repo-grid">
+    {% for group in site.data.arsenal %}{% for r in group.repos %}{% if r.featured %}
+    <a class="repo" href="https://github.com/{{ site.github.username }}/{{ r.name }}" target="_blank" rel="noopener">
+      <span class="repo__top">
+        <span class="repo__perm">-rwxr-x---</span>
+        <span class="repo__group">{{ group.title }}</span>
+        <span class="repo__lang">{{ r.lang }}</span>
+      </span>
+      <span class="repo__name">{{ r.name }}</span>
+      <span class="repo__desc">{{ r.desc }}</span>
+      <span class="tags">{% for t in r.tags %}<span class="tag">#{{ t }}</span>{% endfor %}</span>
+    </a>
+    {% endif %}{% endfor %}{% endfor %}
+  </div>
 </section>
 
-<footer class="site-footer">
-  <details>
-    <summary>Legal disclosure</summary>
-    <p>
-      All content published here — writeups, walkthroughs and technical research — is for
-      educational purposes only, discussed strictly in the context of authorized platforms
-      such as Hack The Box and TryHackMe. Applying any of these techniques against systems
-      without explicit written authorization is illegal. Always get proper authorization
-      before conducting a security assessment.
-    </p>
-  </details>
-  <p>0xBerk · struggle. adapt. understand.</p>
-</footer>
+<!-- ░░ OPS LOG ░░ -->
+<section class="block wrap" id="ops-log">
+  <div class="block__head">
+    <h2 class="cmd"><span class="cmd__ps">0xberk@redteam:~$</span> tail -n 6 ~/ops.log</h2>
+    <a class="more" href="{{ '/writeups/' | relative_url }}">all {{ site.posts | size }} entries →</a>
+  </div>
+  <ol class="oplog">
+    {% for post in site.posts limit:6 %}
+    <li>
+      <a class="oplog__row" href="{{ post.url | relative_url }}">
+        <span class="oplog__ts">[{{ post.date | date: "%Y-%m-%d" }}]</span>
+        <span class="oplog__src">{% if post.platform %}{{ post.platform | downcase }}{% else %}log{% endif %}</span>
+        <span class="oplog__main">
+          <span class="oplog__title">{{ post.title }}</span>
+          {% if post.description %}<span class="oplog__desc">{{ post.description }}</span>{% endif %}
+        </span>
+        <span class="oplog__meta">
+          {% if post.difficulty %}<span class="diff diff--{{ post.difficulty | downcase }}">{{ post.difficulty | downcase }}</span>{% endif %}
+          {% if post.os %}<span class="c-dim">{{ post.os | downcase }}</span>{% endif %}
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<!-- ░░ WHOAMI ░░ -->
+<section class="block wrap" id="whoami">
+  <h2 class="cmd"><span class="cmd__ps">0xberk@redteam:~$</span> whoami</h2>
+  <div class="whoami">
+    <div class="whoami__id">
+      <img src="{{ site.avatar | relative_url }}" width="112" height="112" alt="{{ p.handle }} avatar" loading="lazy">
+      <div>
+        <p class="whoami__handle">{{ p.handle }}</p>
+        <p class="c-dim">{{ p.name }} · Portugal</p>
+      </div>
+    </div>
+    <div class="whoami__text">
+      <p>
+        Most of what I know came from getting stuck for hours on a box, refusing the walkthrough,
+        and eventually understanding <em>why</em> the exploit worked. Today that means Active Directory
+        attack paths on the operator side and writing my own C/C++ tooling on the dev side —
+        injection, syscalls, API hashing, hook detection.
+      </p>
+      <dl class="stats">
+        {% for s in p.stats %}<div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>{% endfor %}
+        <div><dt>writeups</dt><dd>{{ site.posts | size }}</dd></div>
+      </dl>
+      <div class="actions">
+        <a class="btn btn--cyan" href="{{ p.linkedin }}" target="_blank" rel="noopener">connect on linkedin</a>
+        <a class="btn" href="{{ '/whoami/' | relative_url }}">cat ~/whoami --full</a>
+      </div>
+    </div>
+  </div>
+</section>
