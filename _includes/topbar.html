@@ -1,0 +1,22 @@
+{% assign p = site.data.profile %}
+<header class="topbar" id="top">
+  <div class="topbar__inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <span class="brand__glyph" aria-hidden="true">&gt;_</span>
+      <span class="brand__name glitch" data-text="{{ p.banner }}">{{ p.banner }}</span>
+    </a>
+
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
+    <label class="nav-burger" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}><span>~/</span>home</a>
+      <a href="{{ '/arsenal/' | relative_url }}"{% if page.url == '/arsenal/' %} aria-current="page"{% endif %}><span>~/</span>arsenal</a>
+      <a href="{{ '/writeups/' | relative_url }}"{% if page.url == '/writeups/' or page.layout == 'post' %} aria-current="page"{% endif %}><span>~/</span>writeups</a>
+      <a href="{{ '/whoami/' | relative_url }}"{% if page.url == '/whoami/' %} aria-current="page"{% endif %}><span>~/</span>whoami</a>
+      <a class="nav__ext" href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener">github&nbsp;↗</a>
+    </nav>
+
+    <span class="status" title="status"><span class="status__dot"></span>online</span>
+  </div>
+</header>

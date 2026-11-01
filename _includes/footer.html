@@ -1,0 +1,28 @@
+{% assign p = site.data.profile %}
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__cols">
+      <div>
+        <p class="footer__label">&gt; uplink</p>
+        <p class="footer__links">
+          <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener">github</a>
+          <a href="{{ p.linkedin }}" target="_blank" rel="noopener">linkedin</a>
+          <a href="{{ p.cv | relative_url }}">cv.pdf</a>
+        </p>
+      </div>
+      <details class="footer__legal">
+        <summary>&gt; legal disclosure</summary>
+        <p>
+          Everything published here — writeups, research and code — is for education and
+          authorized testing only, discussed in the context of legal platforms such as
+          Hack The Box and TryHackMe or isolated labs. Using these techniques against systems
+          without explicit written permission is illegal. Get authorization first.
+        </p>
+      </details>
+    </div>
+    <p class="footer__sig">
+      <span>{{ p.handle }} · {{ p.motto }}</span>
+      <span>uplink: {{ site.url | remove: 'https://' | downcase }} · {{ 'now' | date: '%Y' }}</span>
+    </p>
+  </div>
+</footer>
